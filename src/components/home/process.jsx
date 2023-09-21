@@ -1,7 +1,7 @@
 
 const Process = () => {
   return (
-    <div className="m-auto max-w-7xl lg:h-[50vh] sm:h-[70vh]">
+    <div className="m-auto max-w-7xl lg:h-[50vh] h-[70vh]">
       <div className="flex justify-center items-center flex-col font_cormorant">
         <h2 className="text-4xl">My Process</h2>
         <p className="lg:text-xl text-base text-center">Over years of experience I developed a perfect process that invloves all stakeholders.</p>
