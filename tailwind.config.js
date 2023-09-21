@@ -28,6 +28,12 @@ export default {
       "6xl": "61.04px",
       "7xl": "76.29px",
     },
+    screens: {
+      sm: "350px", // Small devices (e.g., smartphones)
+      md: "768px", // Medium devices (e.g., tablets)
+      lg: "1024px", // Large devices (e.g., laptops)
+      xl: "1280px", // Extra-large devices (e.g., desktops)
+    },
   },
   plugins: [],
 };
