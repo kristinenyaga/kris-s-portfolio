@@ -105,10 +105,12 @@ line-height: normal;
 }
 
 /* Media Query for Small Screens (e.g., mobile phones) */
+
 @media (max-width: 768px) {
   .electron {
     padding: 160px; /* Adjust the padding for smaller screens */
     margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   .electron::before {

@@ -10,13 +10,13 @@ import { BsArrowRight } from 'react-icons/bs'
 const Hero = () => {
   return (
     <div className="h-[100vh] m-auto max-w-7xl flex flex-col sm:p-2 lg:p-4">
-      <p className="lg:text-6xl  font-noto font-light mt-8 text-darkblue opacity-10 sm:text-4xl md:text-5xl text-center mb-5"> 
+      <p className="lg:text-6xl  font-noto font-light mt-8 text-darkblue opacity-10 text-2xl md:text-5xl text-center mb-5"> 
        creating innovative solutions
       </p>
       <div className='flex justify-between items-center flex-col lg:flex-row '>
         <div className='max-w-2xl flex flex-col gap-5'>
-          <p className="p__heading sm:text-center md:text-left">hey, I'm Kristine.</p>
-          <p className="font_cormorant font-light text-2xl lg:text-2xl sm:text-center md:text-left lg:max-w-lg ">
+          <p className="p__heading text-center md:text-left">hey, I'm Kristine.</p>
+          <p className="font_cormorant font-light text-2xl lg:text-2xl text-center md:text-left lg:max-w-lg ">
             <span className="text-darkblue">UI/UX designer</span> and{' '}
             <span className="text-darkblue">full-stack developer</span>. I develop outstanding web applications that help your business stand out.
           </p>
