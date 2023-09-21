@@ -15,7 +15,7 @@ const Hero = () => {
       </p>
       <div className='flex justify-between items-center flex-col lg:flex-row '>
         <div className='max-w-2xl flex flex-col gap-5'>
-          <p className="p__heading text-center md:text-left">hey, I'm Kristine.</p>
+          <p className="font_cormorant text-base md:text-3xl text-center md:text-left">hey, I'm Kristine.</p>
           <p className="font_cormorant font-light text-xl lg:text-2xl text-center md:text-left lg:max-w-lg ">
             <span className="text-darkblue">UI/UX designer</span> and{' '}
             <span className="text-darkblue">full-stack developer</span>. I develop outstanding web applications that help your business stand out.
