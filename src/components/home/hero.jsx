@@ -16,7 +16,7 @@ const Hero = () => {
       <div className='flex justify-between items-center flex-col lg:flex-row '>
         <div className='max-w-2xl flex flex-col gap-5'>
           <p className="p__heading text-center md:text-left">hey, I'm Kristine.</p>
-          <p className="font_cormorant font-light text-2xl lg:text-2xl text-center md:text-left lg:max-w-lg ">
+          <p className="font_cormorant font-light text-xl lg:text-2xl text-center md:text-left lg:max-w-lg ">
             <span className="text-darkblue">UI/UX designer</span> and{' '}
             <span className="text-darkblue">full-stack developer</span>. I develop outstanding web applications that help your business stand out.
           </p>
@@ -44,7 +44,7 @@ const Hero = () => {
         </div>
         <div className="proton proton relative flex items-center justify-center">    
           <img src={minime} className=' circle_container_image' alt="Mini Me" />
-          <div className="font_cormorant ml-5 absolute top-30 -left-10 w-48 bg-white z-50 h-20 items-center justify-center text-base font-medium text-darkblue ">
+          <div className="font_cormorant ml-5 absolute top-30 -left-10 w-48 bg-white z-50 h-20 items-center justify-center text-sm md:text-base font-medium text-darkblue ">
           Why compromise on quality when you can have the best?
         </div>
           <div className="electron ">
