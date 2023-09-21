@@ -84,3 +84,54 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
+
+.slide-in{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #f0f0f0;
+  transform-origin: bottom;
+}
+.slide-in{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #f0f0f0;
+  transform-origin: top;
+}
+
+/* Media Query for Small Screens (e.g., mobile phones) */
+@media (max-width: 768px) {
+  .electron {
+    padding: 160px; /* Adjust the padding for smaller screens */
+    margin-top: 40px;
+  }
+
+  .electron::before {
+    width: 15px; /* Adjust the size of the pseudo-element for smaller screens */
+    height: 15px;
+    top: 100px; /* Adjust the position of the pseudo-element for smaller screens */
+    left: -40px;
+    margin: 31px;
+  }
+}
+
+/* Media Query for Medium Screens (e.g., tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .electron {
+    padding: 200px; /* Adjust the padding for medium screens */
+    margin-top: 40px;
+  }
+
+  .electron::before {
+    width: 18px; /* Adjust the size of the pseudo-element for medium screens */
+    height: 18px;
+    top: 120px; /* Adjust the position of the pseudo-element for medium screens */
+    left: -50px;
+    margin: 41px;
+  }
+}
