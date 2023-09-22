@@ -10,41 +10,41 @@ import { BsArrowRight } from 'react-icons/bs'
 const Hero = () => {
   return (
     <div className="h-[100vh] m-auto max-w-7xl flex flex-col sm:p-2 lg:p-4">
-      <p className="lg:text-6xl  font-noto font-light mt-8 text-darkblue opacity-10 text-2xl md:text-5xl text-center mb-5"> 
+      <p className="lg:text-6xl  font-noto font-light mt-8 text-darkblue opacity-10 text-2xl md:text-5xl text-center mb-5 hidden"> 
        creating innovative solutions
       </p>
-      <div className='flex justify-between items-center flex-col lg:flex-row '>
-        <div className='max-w-2xl flex flex-col gap-5'>
-          <p className="font_cormorant text-base md:text-3xl text-center md:text-left">hey, I'm Kristine.</p>
-          <p className="font_cormorant font-light text-xl lg:text-2xl text-center md:text-left lg:max-w-lg ">
+      <div className='flex justify-between items-center flex-col lg:flex-row gap-5 '>
+        <div className='max-w-2xl flex flex-col gap-3'>
+          <p className="font_cormorant text-2xl md:text-3xl text-center lg:text-left">hey, I'm Kristine.</p>
+          <p className="font_cormorant font-light text-2xl md:text-3xl text-center lg:text-left  ">
             <span className="text-darkblue">UI/UX designer</span> and{' '}
             <span className="text-darkblue">full-stack developer</span>. I develop outstanding web applications that help your business stand out.
           </p>
           {/* <p className="text-md p__smallheading flex items-center gap-2">Let's take your brand to new heights <PiArrowSquareOut className='text-black'/></p> */}
           <div className='flex justify-between max-w-md mt-5 items-center'>
             <div className='flex justify-center items-center gap-2 font_cormorant text-xl'>
-              contact me <div className='w-14 h-0.5 bg-darkblue'/>
+             reach out <div className='w-14 h-0.5 bg-darkblue hidden sm:block'/>
             </div>
-            <div className='border border-black p-2.5  rounded-full'>
-              <FaLinkedinIn   />
+            <div className='border border-darkblue p-1.5 md:pp-2.5 rounded-full bg-darkblue '>
+              <FaLinkedinIn  className='text-white'   />
             </div>
-            <div className='border border-black p-2.5  rounded-full'>
-              <BsWhatsapp  />
+            <div className='border border-darkblue bg-darkblue p-2 rounded-full'>
+              <BsWhatsapp  className='text-white' />
             </div>
-            <div className='border border-black p-2.5  rounded-full'>
-              <BiSolidPhoneCall  />
+            <div className='border border-darkblue bg-darkblue p-2 rounded-full'>
+              <BiSolidPhoneCall className="text-white" />
             </div>
-            <div className='border border-black p-2.5  rounded-full'>
-              <BiLogoGmail  />
+            <div className='border border-darkblue bg-darkblue p-2 rounded-full'>
+              <BiLogoGmail className="text-white"/>
             </div>
-            <div className='border border-black p-2.5  rounded-full'>
-              <BsTwitter  />
+            <div className='border border-darkblue bg-darkblue p-2 rounded-full'>
+              <BsTwitter  className="text-white"/>
             </div>
           </div>
         </div>
         <div className="proton proton relative flex items-center justify-center">    
           <img src={minime} className=' circle_container_image' alt="Mini Me" />
-          <div className="font_cormorant ml-5 absolute top-30 -left-10 w-48 bg-white z-50 h-14 items-center justify-center text-sm md:text-base font-medium text-darkblue ">
+          <div className="font_cormorant  absolute top-30 -left-10 w-40 bg-white z-50 h-14 items-center justify-center text-sm md:text-base font-medium text-darkblue ">
           Why compromise on quality when you can have the best?
         </div>
           <div className="electron ">
