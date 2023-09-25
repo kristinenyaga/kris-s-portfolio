@@ -15,7 +15,7 @@ const Services = () => {
         <p className='text-3xl font-noto font-thin text-center'>This is what i can do for you</p>
 
       </div>
-     <div className='flex items-center justify-around   mt-10'>
+     <div className='flex items-center justify-around mt-20'>
         <div className='max-w-xl'>
           <div className='flex flex-col'>
             <p className='text-4xl text-darkblue font_opensans'>UI/UX design</p>
