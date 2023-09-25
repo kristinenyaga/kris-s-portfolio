@@ -7,9 +7,10 @@ export default {
     colors: {
       lightblue: "#84A4FC",
       darkblue: "#0046B3",
-      black: "#1E1E1E",
+      black: "#141414",
       white: "#FFFFFF",
-      lightgray: "#D9D9D9",
+      lightgray: "#f9f9f9",
+      purple: "#3d155f",
     },
     fontFamily: {
       sans: ["Graphik", "sans-serif"],
