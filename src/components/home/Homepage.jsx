@@ -1,7 +1,7 @@
 import About from "./about"
 import Hero from "./hero"
 // import Process from "./Process"
-import Projects from "./projects"
+import Projects from "./projects/projects"
 import Services from "./Services"
 import Shapes from "./shapes"
 import transition from "../../utils/transition"
@@ -16,11 +16,11 @@ const Homepage = () => {
       <About />
       <Services />
       {/* <Process /> */}
-      <Myprocess />
+      {/* <Myprocess /> */}
       {/* <Process /> */}
       {/* <Shapes /> */}
       <Projects />
-      {/* <Cta /> */}
+      <Cta />
       <Footer />
       
     </div>

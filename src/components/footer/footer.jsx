@@ -8,40 +8,16 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className=" h-[70vh] bg-black flex justify-center relative text-white">
-      <div className="text-white mt-24 flex flex-col items-center gap-10">
-        <p className='font_poppins text-6xl max-w-lg text-center'>Have a project? Let's talk</p>
-        <div className='text-center'>
-          <p className='font_opensans text-base'>~Reach out via email~</p>
-          <p className='font_poppins text-xl flex justify-center items-center gap-2 cursor-pointer text-lightblue hover:scale-105 border-b'>nyagakristine@gmail.com <BsArrowUpRight className='text-base' /> </p>
+    <div className='max-w-full bg-black h-[60vh] relative'>
+      <div className='flex flex-col justify-between items-center gap-14'>
+        <p className='absolute left-20 md:left-14 top-7 md:top-20 circle font_poppins text-lightgray'>hello</p>
+        <div className='flex justify-items-center gap-3 flex-col content-center items-center text-white font_poppins md:pt-28 pt-20'>
+        <p className='lg:text-6xl text-4xl md:text:5xl'>Have a project?</p>
+        <p className='lg:text-5xl text-3xl'>Lets talk</p>
         </div>
-      </div>
-      <div className='absolute border-white bottom-5 w-[80vw] border-t'>
-        <div className='flex justify-between mt-2'>
-          <div>
-            <p>kristine nyaga</p>
-          </div>
-          <div>
-            <ul className='flex  justify-center gap-6 items-center'>
-              <li>
-                <NavLink className='navitem' exact to="/">01.home</NavLink>
-              </li>
-              <li>
-                <NavLink className='navitem' to="/about">02.about</NavLink>
-              </li>
-              <li>
-                <NavLink className='navitem' to="/work">03.work</NavLink>
-              </li>
-              <li>
-                <NavLink className='navitem' to="/services">04.services</NavLink>
-              </li>
-              <li>
-                <NavLink className='navitem' to="/contact">05.contact</NavLink>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <div className='flex justify-between items-center gap-3'>
+        <div className='text-center flex'>
+
+          <div className='flex justify-between items-center gap-3 pt-10 md:pt-0'>
             <div className='border border-lightgray p-2 rounded-full'>
               <FaLinkedinIn  className='text-white'   />
             </div>
@@ -58,13 +34,36 @@ const Footer = () => {
               <BsTwitter  className="text-white"/>
             </div>
           </div>
+        </div>
+        
+        <div className='flex justify-around text-white absolute bottom-10 w-full '>
+          <div className='hidden md:block'>
+            <p className='font_poppins'>kristine nyaga</p>
+          </div>
+          <div>
+            <div className='flex gap-9 justify-between list-none font_poppins'>
+              <p>
+                <NavLink className='navitem' exact to="/">home</NavLink>
+              </p>
+              <p>
+                <NavLink className='navitem' to="/about">about</NavLink>
+              </p>
+              <p>
+                <NavLink className='navitem' to="/work">work</NavLink>
+              </p>
+              <p>
+                <NavLink className='navitem' to="/services">services</NavLink>
+              </p>
+              <p>
+                <NavLink className='navitem' to="/contact">contact</NavLink>
+              </p>
+            </div>
           </div>
         </div>
-        <p className='font_opensans text-sm'>&copy;2023.Built and designed by kristine nyaga.All rights reserved.</p>
-
+        <p className='text-white absolute bottom-0'>copyright</p>
       </div>
-
     </div>
+    
   )
 }
 

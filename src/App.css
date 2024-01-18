@@ -82,9 +82,18 @@ line-height: normal;
   animation: rotation 5s linear 2s 1 ;
   border-radius: 50%;
   padding: 250px;
-  border: 1px solid #f2eded;
+  border: 1px solid #222222;
   /* background-color: #0a0a0a; */
 }
+.circle{
+  width: 220px;
+  border: 1px solid #f9f9f9;
+  height: 220px;
+  border-radius: 50%;
+  animation: rotation 5s linear 2s infinite ;
+
+}
+
 
 .electron::before {
   content: "";
@@ -110,7 +119,6 @@ line-height: normal;
     font-size: 12.80px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
 }
 
 .slide-in{
@@ -166,6 +174,21 @@ line-height: normal;
     width: 18px; /* Adjust the size of the pseudo-element for medium screens */
     height: 18px;
     top: 120px; /* Adjust the position of the pseudo-element for medium screens */
+    left: -50px;
+    margin: 41px;
+  }
+}
+
+@media (min-width: 1024px){
+  .electron {
+    padding: 200px; /* Adjust the padding for medium screens */
+    /* margin-top: 40px; */
+  }
+
+  .electron::before {
+    width: 18px; /* Adjust the size of the pseudo-element for medium screens */
+    height: 18px;
+    top: 113px; /* Adjust the position of the pseudo-element for medium screens */
     left: -50px;
     margin: 41px;
   }

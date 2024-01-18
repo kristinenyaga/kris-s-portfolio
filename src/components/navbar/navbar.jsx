@@ -2,7 +2,7 @@ import mylogo from '../../assets/mylogo.svg'
 import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
-    <div>
+    <div className='max-w-full mt-2 hidden md:block'>
       <div className='flex justify-between items-center mt-0.55 p-2'>
         <NavLink
           className='navitem'
@@ -34,9 +34,6 @@ const Navbar = () => {
             <NavLink className='navitem' to="/contact">05.contact</NavLink>
           </li>
         </ul>
-        <div>
-          <button className='p__smalltext border p-1.5 px-8  border-darkblue bg-darkblue rounded-md text-xl text-white'>resume</button>
-        </div>
           
       </div>
     </div>

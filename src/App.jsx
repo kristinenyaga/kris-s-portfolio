@@ -6,7 +6,7 @@ import { AnimatePresence } from 'framer-motion';
 function App() {
   return (
     <Router>
-      {/* <Navbar /> */}
+      <Navbar />
       <AnimatePresence mode='wait'>
       {router} 
       </AnimatePresence>
