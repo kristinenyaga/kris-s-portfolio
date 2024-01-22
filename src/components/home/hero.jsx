@@ -9,7 +9,7 @@ import { BsArrowRight } from 'react-icons/bs'
 
 const Hero = () => {
   return (
-    <div className="h-[100vh] mx-auto max-w-7xl flex justify-center flex-col sm:p-2 lg:p-4 font_poppins">
+    <div className="h-[100vh] mx-auto max-w-7xl flex justify-center flex-col sm:p-2 lg:p-4 font_poppins section">
       <p className="lg:text-6xl font-noto font-light mt-8 text-darkblue opacity-10 text-2xl md:text-5xl text-center mb-5 hidden"> 
        creating innovative solutions
       </p>

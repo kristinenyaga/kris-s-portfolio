@@ -2,13 +2,13 @@ import { BsArrowUpRight } from 'react-icons/bs'
 import cornerstonepatternsright from '../../assets/cornerstone-patterns-right.svg'
 const Services = () => {
   return (
-    <div className='m-auto  w-[90vw] mt-28 h-[100vh]'>
+    <div className='m-auto  w-[90vw] mt-28 h-[100vh] section'>
       <div className='flex flex-col justify-center items-center'>
         <p className='text-3xl font-noto font-light text-black flex justify-center items-center gap-2'><div className='w-1.5 h-1.5 rounded-full bg-black' />Services</p>
         <p className='text-3xl font-noto font-thin text-center'>What i can do</p>
 
       </div>
-      <div className='flex flex-col justify-center items-center  gap-10'>
+      <div className='flex flex-col justify-center items-center  gap-16'>
         <div className='flex items-center justify-around mt-20'>
         <div className='max-w-xl'>
           <div className='flex flex-col'>

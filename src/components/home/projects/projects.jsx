@@ -19,7 +19,7 @@ const scroll = (direction) => {
 
   }
   return(
-    <div className="app__gallery flex__center text-white bg-black">
+    <div className="app__gallery flex__center text-white bg-black section">
       <div className="app__gallery-content">
         <h1 className="font_poppins text-4xl">My works</h1>
         <p className="font_poppins text-2xl" style={{ color: "#AAA" }}>Explore some of the websites and databases i have created.</p>
