@@ -12,7 +12,7 @@ const Footer = () => {
       <div className='flex flex-col justify-between items-center gap-14'>
         <p className='absolute left-20 md:left-14 top-7 md:top-20 circle font_poppins text-lightgray'>hello</p>
         <div className='flex justify-items-center gap-3 flex-col content-center items-center text-white font_poppins md:pt-28 pt-20'>
-        <p className='lg:text-6xl text-4xl md:text:5xl'>Have a project?</p>
+        <p className='lg:text-5xl text-4xl md:text:5xl'>Have a project?</p>
         <p className='lg:text-5xl text-3xl'>Lets talk</p>
         </div>
         <div className='text-center flex'>
