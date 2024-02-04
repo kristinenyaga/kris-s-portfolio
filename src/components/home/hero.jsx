@@ -44,7 +44,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="proton proton relative flex items-center justify-center">    
+        <div className="proton relative flex items-center justify-center">    
           <img src={minime} className=' circle_container_image' alt="Mini Me" />
           <div className="  absolute top-30 -left-10 w-40 bg-white z-50 h-14 items-center justify-center text-sm  font-medium text-darkblue ">
           Why compromise on quality when you can have the best?
