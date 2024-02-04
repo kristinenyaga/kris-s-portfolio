@@ -1,37 +1,52 @@
+import shopping from "../../assets/shopping.jpg"
 export const projectsList = [
   {
-    image: "",
+    image: shopping,
     name: "GymPro",
-    description: "",
+    description:
+      "Description: Developed a full-stack online marketplace application using React.js for the frontend and Node.js with Express.js for the backend. Integrated Stripe API for payment processing and MongoDB for database management. Implemented user authentication and authorization using JWT tokens. Utilized responsive design principles for optimal user experience across devices",
+    color: "black",
   },
   {
-    image: "",
+    image: shopping,
     name: "Geritch restaurant",
-    description: "",
+    description:
+      "Description: Developed a full-stack online marketplace application using React.js for the frontend and Node.js with Express.js for the backend. Integrated Stripe API for payment processing and MongoDB for database management. Implemented user authentication and authorization using JWT tokens. Utilized responsive design principles for optimal user experience across devices.",
+    color: "white",
   },
   {
-    image: "",
+    image: shopping,
     name: "Text Summarizer",
-    description: "",
+    description:
+      "Description: Developed a full-stack online marketplace application using React.js for the frontend and Node.js with Express.js for the backend. Integrated Stripe API for payment processing and MongoDB for database management. Implemented user authentication and authorization using JWT tokens. Utilized responsive design principles for optimal user experience across devices.",
+    color: "black",
   },
   {
-    image: "",
+    image: shopping,
     name: "Authentication",
-    description: "",
+    description:
+      "Description: Developed a full-stack online marketplace application using React.js for the frontend and Node.js with Express.js for the backend. Integrated Stripe API for payment processing and MongoDB for database management. Implemented user authentication and authorization using JWT tokens. Utilized responsive design principles for optimal user experience across devices.",
+    color: "white",
   },
   {
-    image: "",
+    image: shopping,
     name: "Cart component",
-    description: "",
+    description:
+      "Description: Developed a full-stack online marketplace application using React.js for the frontend and Node.js with Express.js for the backend. Integrated Stripe API for payment processing and MongoDB for database management. Implemented user authentication and authorization using JWT tokens. Utilized responsive design principles for optimal user experience across devices.",
+    color: "black",
   },
   {
-    image: "",
+    image: shopping,
     name: "Ecommerce",
-    description: "",
+    description:
+      "Description: Developed a full-stack online marketplace application using React.js for the frontend and Node.js with Express.js for the backend. Integrated Stripe API for payment processing and MongoDB for database management. Implemented user authentication and authorization using JWT tokens. Utilized responsive design principles for optimal user experience across devices.",
+    color: "white",
   },
   {
-    image: "",
+    image: shopping,
     name: "My Portfolio",
-    description: "",
+    description:
+      "Description: Developed a full-stack online marketplace application using React.js for the frontend and Node.js with Express.js for the backend. Integrated Stripe API for payment processing and MongoDB for database management. Implemented user authentication and authorization using JWT tokens. Utilized responsive design principles for optimal user experience across devices.",
+    color: "black",
   },
 ];

@@ -1,110 +1,40 @@
-import PropTypes from 'prop-types';
-import { motion,useInView,useAnimation } from 'framer-motion';
-import { useRef,useEffect } from 'react';
-const defaultAnimations = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5, 
-      
-    }
-  }
-}
-export const AnimatedText = ({
-  text,
-  el: Wrapper = "p",
-  className,
-  repeatDelay
-}) => {
-  const words = Array.isArray(text) ? text : text.split(' ');
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.5 })
-  const controls = useAnimation();
-    useEffect(() => {
-    let timeout;
-    const show = () => {
-      controls.start("visible");
-      if (repeatDelay) {
-        timeout = setTimeout(async () => {
-          await controls.start("hidden");
-          controls.start("visible");
-        }, repeatDelay);
-      }
-    };
-
-    if (isInView) {
-      show();
-    } else {
-      controls.start("hidden");
-    }
-
-    return () => clearTimeout(timeout);
-  }, [isInView]);
-  
-  return <Wrapper className={className}>
-    <span className='sr-only'>{text}</span>
-    <motion.span
-      ref={ref}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      transition={{ staggerChildren: 0.2, delayChildren: 0.2 }}
-      aria-hidden
-    >
-      {words.map((word, index) => (
-      <span key={index} className='inline-block'>
-          {word.split('').map((char, index) => (
-            <motion.span className='inline-block' variants={defaultAnimations} key={index}>{char}</motion.span>
-          ))}  
-          <span className="inline-block">&nbsp;</span>
-      </span>
-      ))}
-    </motion.span>
-  </Wrapper>
-  
-}
-AnimatedText.propTypes = {
-  text: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]).isRequired,
-  el: PropTypes.string,
-  className: PropTypes.string,
-};
-
+import React from 'react'
+import { useState } from "react";
+import "./sass/main.scss";
+import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
+import Banner from "./Banner";
+import Loader from "./Loader";
+import ProjectList from './ProjectList';
+import Footer from '../footer/footer';
 const Work = () => {
-  return (
-    <main className="bg-black">
-      <div className="mx-auto max-w-6xl pt-14 text-white">
-        <section className="h-screen">
-          <AnimatedText text={[ "scroll"," down..."]} el="h1" className="text-[90px] md:text-[200px] md:leading-relaxed"/>
-          {/* <p className="text-4xl md:text-[200px] md:leading-relaxed">
-            Scroll down...
-          </p> */}
-        </section>
-        <section className="flex h-[50vh] flex-col items-center justify-center">
-          <AnimatedText
-            text={["Hello","you"]}
-            el="h1"
-            className="text-[130px] md:text-[200px]"
-          />
-        </section>
+  const [loading, setLoading] = useState(true);
 
-        <section className="flex min-h-[50vh] flex-col items-center justify-center">
-          <AnimatedText
-            el="h2"
-            text={[
-              "This","is", "written", "on",
-              "a", "typing,", "machine","Tick tick",
-              "tick tack tack...",
-            ]}
-            className="text-4xl"
-          />
-        </section>
-      </div>
-    </main>
+  return (
+        <LayoutGroup>
+      <AnimatePresence>
+        {loading ? (
+          <motion.div key="loader">
+            <Loader setLoading={setLoading} />
+          </motion.div>
+        ) : (
+          <>
+              <Banner />
+              <ProjectList />
+              <Footer />
+            {/* {!loading && (
+              <div className="transition-image final">
+                <motion.img
+                  src={process.env.PUBLIC_URL + `/images/image-2.jpg`}
+                  layoutId="main-image-1"
+                  transition={{ duration: 1.6, ease: [0.4, 0, 0.2, 1] }}
+                />
+              </div>
+            )} */}
+          </>
+        )}
+      </AnimatePresence>
+    </LayoutGroup>
   )
 }
-
 
 export default Work
