@@ -6,8 +6,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { servicesList } from './myservices';
 const About = () => {
   useEffect(() => {
-     gsap.registerPlugin(ScrollTrigger);
-
+    gsap.registerPlugin(ScrollTrigger);
     gsap.utils.toArray(".comparisonSection").forEach(section => {
     let tl = gsap.timeline({
         lazy: false, // It sets lazy to false, meaning it initializes immediately.
