@@ -1,6 +1,5 @@
 import React from 'react'
 import { BsArrowUpRight } from 'react-icons/bs'
-import diamond from '../../assets/diamond.png'
 const Myprocess = () => {
   return (
     <div className='h-[80vh] bg-black text-white'>
