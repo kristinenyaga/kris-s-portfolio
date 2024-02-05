@@ -6,6 +6,7 @@ import Banner from "./Banner";
 import Loader from "./Loader";
 import ProjectList from './ProjectList';
 import Footer from '../footer/footer';
+import './work.css'
 const Work = () => {
   const [loading, setLoading] = useState(true);
 
@@ -20,16 +21,7 @@ const Work = () => {
           <>
               <Banner />
               <ProjectList />
-              <Footer />
-            {/* {!loading && (
-              <div className="transition-image final">
-                <motion.img
-                  src={process.env.PUBLIC_URL + `/images/image-2.jpg`}
-                  layoutId="main-image-1"
-                  transition={{ duration: 1.6, ease: [0.4, 0, 0.2, 1] }}
-                />
-              </div>
-            )} */}
+              {/* <Footer /> */}
           </>
         )}
       </AnimatePresence>

@@ -1,4 +1,5 @@
-import shopping from "../../assets/shopping.jpg"
+import geritch from '../../assets/geritch.svg'
+import shopping from '../../assets/shopping.jpg'
 export const projectsList = [
   {
     image: shopping,
@@ -8,7 +9,7 @@ export const projectsList = [
     color: "black",
   },
   {
-    image: shopping,
+    image: geritch,
     name: "Geritch restaurant",
     description:
       "Description: Developed a full-stack online marketplace application using React.js for the frontend and Node.js with Express.js for the backend. Integrated Stripe API for payment processing and MongoDB for database management. Implemented user authentication and authorization using JWT tokens. Utilized responsive design principles for optimal user experience across devices.",
