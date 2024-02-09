@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import mylogo from '../../assets/mylogo.svg'
 import { NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import transition from '../../utils/transition';
 const Navbar = () => {
   const [open, setOpen] = useState(false)
   const navLinks = [
@@ -80,7 +78,7 @@ const Navbar = () => {
         <NavLink
           className='navitem'
             to="/">
-          <img src={mylogo} className='w-20' />
+          <p>Kristine nyaga</p>
         </NavLink>
         <ul className='lg:flex hidden justify-center gap-6 items-center'>
           <li>
@@ -99,9 +97,6 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink className='navitem' to="/work">work</NavLink>
-          </li>
-          <li>
-            <NavLink className='navitem' to="/services">services</NavLink>
           </li>
           <li>
             <NavLink className='navitem' to="/contact">contact</NavLink>
