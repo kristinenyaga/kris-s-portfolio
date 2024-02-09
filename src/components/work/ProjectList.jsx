@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { projectsList } from './projects'
-import Project from './Project'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import './work.css'
@@ -17,7 +16,7 @@ const ProjectList = () => {
         scroller:container.current
       })
 
-      gsap.utils.toArray(panel.current).forEach((panel, index) => {
+      gsap.utils.toArray(panel.current).forEach((panel) => {
         gsap.to(panel, {
           backgroundPosition: '-100px',
           duration: 5,
@@ -44,7 +43,7 @@ const ProjectList = () => {
     <section ref={container} className='project_container'>
       {projectsList.map((slide, index) => {
         return (
-          <section  className='h-screen text-textgray flex flex-col-reverse lg:flex-row justify-center items-center snap-start'>
+          <section  className='h-screen text-textgray flex flex-col-reverse lg:flex-row justify-center items-center snap-start ' key={index}>
             <div className='lg:w-[35%] w-screen h-[40vh]'>
               <div className='font_albertsans leading-7 flex flex-col justify-center  h-full px-5 lg:pl-10'>
                 <h1 className='text-3xl mb-2'>{slide.name}</h1>
