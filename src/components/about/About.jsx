@@ -1,10 +1,11 @@
-import { useEffect,useRef } from 'react';
-import minime from '../../assets/mini_me.svg';
+import { useEffect } from 'react';
 import './about.css'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { servicesList } from './myservices';
+import {useNavigate} from 'react-router-dom'
 const About = () => {
+  const nav=useNavigate()
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.utils.toArray(".comparisonSection").forEach(section => {
@@ -74,7 +75,7 @@ const About = () => {
                 <p className="font_poppins md:max-w-xl max-w-[450px]  text-[16px] p-2 ">Full-stack developer dedicated to creating long-lasting experiences through web development. With expertise in both frontend and backend technologies</p>
               </div>
               <div className='flex justify-center'>
-                <p className="flex justify-center items-center w-[8rem] h-[8rem] text-sm border rounded-full   border-textgray text-textgray scroll-down bottom-0 ">
+                <p className="flex justify-center items-center w-[8rem] h-[8rem] text-sm border rounded-full   border-textgray text-textgray scroll-down bottom-0 " onClick={()=>nav('/contact')}>
                 reach out
               </p>
               </div>
@@ -118,7 +119,7 @@ const About = () => {
               what i use
             </p>
             <p className='text-4xl text-textgray mb-2'>Technologies</p>
-            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised.</p>
+            <p>As a full-stack developer and UI/UX designer, I leverage a variety of technologies to bring projects to life. From front-end frameworks like React.js to back-end technologies such as Node.js and Django, I utilize a diverse toolkit to create dynamic applications.</p>
             <div className='flex justify-between  mt-10  text-base'>
               <div>
                 <p className='text-[22px]'>Frontend</p>
