@@ -9,8 +9,12 @@ export default {
       darkblue: "#0046B3",
       black: "#141414",
       white: "#FFFFFF",
-      lightgray: "#f9f9f9",
+      lightgray: "#f5f5f5",
       purple: "#3d155f",
+      gray: "#F5F5F5",
+      textgray: "#333333",
+      bordergray: "#acacac",
+      graay:"#808080"
     },
     fontFamily: {
       sans: ["Graphik", "sans-serif"],
@@ -30,8 +34,10 @@ export default {
       "7xl": "76.29px",
     },
     screens: {
-      sm: "350px", // Small devices (e.g., smartphones)
-      md: "768px", // Medium devices (e.g., tablets)
+      sm: "350px",
+      smsm:"400px",// Small devices (e.g., smartphones)
+      smmd: "500px",
+      md: "728px", // Medium devices (e.g., tablets)
       lg: "1024px", // Large devices (e.g., laptops)
       xl: "1280px", // Extra-large devices (e.g., desktops)
     },
