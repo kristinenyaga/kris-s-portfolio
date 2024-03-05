@@ -1,10 +1,17 @@
 import {useRef} from 'react';
-
-import './projects.css';
+import { useNavigate } from 'react-router-dom'
+import { BsArrowRight } from 'react-icons/bs';
 import { images } from '../../constants'
-
 import { BsArrowRightShort, BsArrowLeftShort } from 'react-icons/bs';
-const myimages = [images.gallery01,images.gallery02,images.gallery03,images.gallery04]
+import './projects.css';
+
+const myimages = [
+  { src: images.portfolio, alt: 'Portfolio', name: 'My Portfolio',link:'https://kristine-nyaga.vercel.app' },
+  { src: images.restaurant, alt: 'Restaurant', name: 'Geritch restaurant',link:'https://restaurant-blue-one.vercel.app/' },
+  { src: images.gympro, alt: 'GymPro', name: 'GymPro',link:'https://gym-pro.vercel.app' },
+  { src: images.sumtext, alt: 'Sumtext', name: 'Sumtext',link:'https://sumtext-summarizer.vercel.app' }
+];
+
 const Projects = () => {
 const scrollRef = useRef(null);
 
@@ -17,23 +24,32 @@ const scroll = (direction) => {
     current.scrollLeft += 300;
   }
 
+}
+  const nav = useNavigate()
+  const navigate = () => {
+    nav('/work')
   }
   return(
-    <div className="app__gallery flex__center text-white bg-black section">
+    <div className="app__gallery flex__center text-white bg-black section h-[100vh] font_albertsans">
       <div className="app__gallery-content">
-        <h1 className="font_poppins text-4xl">My works</h1>
-        <p className="font_poppins text-2xl" style={{ color: "#AAA" }}>Explore some of the websites and databases i have created.</p>
-        <button type="button" className='font_poppins text-lg'>View More</button>
+        <h1 className="text-4xl">My works</h1>
+        <p className="text-2xl" style={{ color: "#AAA" }}>Explore some of the websites and databases i have created.</p>
+        <button className="text-white  group cursor-pointer">
+            <span className="p-2 text-base md:p-3 rounded-full border border-white text-white group-hover:bg-white group-hover:text-black transition-all duration-300 ease-in-out group-hover:px-8 " onClick={navigate}>view</span> more<BsArrowRight className='inline group-hover:scale-100 group-hover:ml-3 ' />
+        </button>
+        
       </div>
 
       <div className="app__gallery-images">
         <div className="app__gallery-images_container" ref={scrollRef}>
-          {myimages.map((image,index) => (
-            <div className="app__gallery-images_card flex__center" key={`gallery-image ${index + 1}`}>
-              <img src={image} alt="gallery" />
+          {myimages.map((image, index) => (
+            <div className="app__gallery-images_card flex__center relative" key={`gallery-image-${index + 1}`} onClick={()=>window.open(image.link,'_blank')}>
+              <div className="image-container">
+                <img src={image.src} alt={image.alt} />
+                <div className="overlay">{image.name}</div>
+              </div>
             </div>
           ))}
-
         </div>
 
         <div className="app__gallery-images_arrows">
