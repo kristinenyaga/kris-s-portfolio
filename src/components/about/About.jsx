@@ -48,7 +48,7 @@ const About = () => {
         <div className="comparisonImage beforeImage">
           <div className='inside'>
             <div className="flex flex-col justify-center items-center place-items-center place-content-center font_albertsans">
-              <p className="font_bellafaire text-[4rem] sm:text-[6rem] smsm:text-[6.5rem] smmd:text-[8rem] p-4 sm:p-0 lg:p-10 md:text-[8.5rem] lg:text-[9rem] xl:text-[11rem] mt-10 lg:mt-0 ">About <br /> me ^__^</p>
+              <p className="font_bellafaire text-[4rem] sm:text-[6rem] smsm:text-[6rem] smmd:text-[7rem] p-4 sm:p-0 lg:p-10 md:text-[8rem] lg:text-[9rem] xl:text-[11rem] mt-10 lg:mt-0 ">About <br /> me ^__^</p>
           
             </div> 
             <div className="flex flex-col md:flex-row justify-between lg:px-28 md:mt-20 lg:mt-0 ">
