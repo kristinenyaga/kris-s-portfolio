@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import krislogo from "../../assets/krisslogo.svg"
+import { CgMenuCake } from "react-icons/cg";
+import { IoMdCloseCircle } from "react-icons/io";
 const Navbar = () => {
   const [open, setOpen] = useState(false)
   const navLinks = [
@@ -8,7 +11,7 @@ const Navbar = () => {
     { title: "About Me", href: "/about" },
     { title: "My Work", href: "/work" },
     { title: "Contact", href: "/contact" },
-    { title: "nyagakristine@gmail.com", href: "/" },
+    { title: "kristinenyaga@gmail.com", href: "/" },
   
 ];
   
@@ -78,9 +81,9 @@ const Navbar = () => {
         <NavLink
           className='navitem'
             to="/">
-          <p>Kristine nyaga</p>
+          <img src={ krislogo} className='pt-5 w-20 pl-4' alt="kris's logo" />
         </NavLink>
-        <ul className='lg:flex hidden justify-center gap-6 items-center'>
+        <ul className='lg:flex  hidden justify-center gap-6 items-center'>
           <li>
             <NavLink className='navitem' exact to="/"
                 style={({ isActive, isPending }) => {
@@ -107,7 +110,7 @@ const Navbar = () => {
           className="cursor-pointer lg:hidden text-md text-black"
           onClick={toggleMenu}
         >
-          Menu
+          <CgMenuCake className='text-[40px] pr-2 cursor-pointer'/>
         </div>
       </motion.div>
       <AnimatePresence>
@@ -120,8 +123,8 @@ const Navbar = () => {
           className='fixed z-50  h-[100vh] w-screen top-0 mt-0 left-0 bg-black text-lightgray p-2 origin-top px-5 font_albertsans'>
           <div className='flex h-full flex-col'>
             <div className='flex justify-between'>
-              <h1>krisnyaga</h1>
-              <p onClick={toggleMenu}>Close</p>
+              <p className='mt-5 text-base max-w-[20px]'>Kristine Nyaga</p>
+              <IoMdCloseCircle onClick={toggleMenu} className='text-[35px] mt-4'/>
             </div>
             <div className='h-full flex justify-center flex-col'>
               <motion.div
@@ -132,7 +135,7 @@ const Navbar = () => {
                 className="flex flex-col h-full justify-center items-center gap-4 ">
                   {navLinks.map((link, index) => (
                     <div className='overflow-hidden' key={index}>
-                      <MobileLink  title={link.title} href={link.href} />
+                      <MobileLink title={link.title} href={link.href} onclick={ toggleMenu} />
                     </div>
                   ))}
                 </motion.div>
@@ -163,13 +166,13 @@ const mobileLinkVars = {
     },
   },
 };
-const MobileLink = ({title,href}) => {
+// eslint-disable-next-line react/prop-types
+const MobileLink = ({ title, href,onclick }) => {
   return (
     <motion.div
       variants={mobileLinkVars}
-
-      className='text-2xl '>
-      <NavLink to={href}>{title}</NavLink>
+      className='text-xl '>
+      <NavLink to={href} onClick={onclick}>{title}</NavLink>
       
     </motion.div>    
   )
