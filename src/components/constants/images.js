@@ -1,12 +1,19 @@
-import gallery01 from "../../assets/gallery01.png";
-import gallery02 from "../../assets/gallery02.png";
-import gallery03 from "../../assets/gallery03.png";
-import gallery04 from "../../assets/gallery04.png";
+import gympro from "../../assets/Gym.svg";
+import mern from "../../assets/Mern.svg";
+import portfolio from "../../assets/Portfolio.svg";
+import sumtext from "../../assets/Sumtext.svg";
+import restaurant from "../../assets/Restaurant.svg"
+import store from "../../assets/Store.svg";
+import cart from "../../assets/Cart.svg";
+
 
 
 export default {
-  gallery01,
-  gallery02,
-  gallery03,
-  gallery04,
+  gympro,
+  mern,
+  portfolio,
+  sumtext,
+  restaurant,
+  store,
+  cart
 };
