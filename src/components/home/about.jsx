@@ -12,11 +12,11 @@ const About = () => {
           <div className=' flex flex-col gap-3 '>
             <div className=' text-xl md:text-xl lg:text-left font-light'>
               <p className='text-xl opacity-10'>kristine nyaga</p>
-              <p className='text-[80px]'>who am i</p>
+              <p className='lg:text-[80px] md:text-7xl text-5xl'>who am i</p>
             </div>
           </div>
 
-          <div className=" relative flex flex-col gap-5 items-center justify-center max-w-3xl lg:text-[18px] text-base leading-8 ">   
+          <div className=" relative flex flex-col gap-5 items-center justify-center max-w-3xl lg:text-[18px] md:text-base leading-8 text-sm ">   
             <p className=''>As a full-stack developer and UI/UX designer, I possess a diverse skill set to create seamless digital experiences.I have expertise in both front-end and back-end technologies, allowing me to craft functional applications. My proficiency spans across various programming languages, frameworks, and databases, empowering me to build dynamic and responsive user interfaces while ensuring smooth functionality. </p>
             <p>My UI/UX design skills enable me to conceptualize, prototype, and design interfaces that prioritize user needs and enhance overall usability. By seamlessly integrating development and design principles, I deliver engaging and user-centric digital solutions.</p>
             <button className="text-white  group cursor-pointer">

@@ -32,8 +32,8 @@ const scroll = (direction) => {
   return(
     <div className="app__gallery flex__center text-white bg-black section h-[100vh] font_albertsans">
       <div className="app__gallery-content">
-        <h1 className="text-4xl">My works</h1>
-        <p className="text-2xl" style={{ color: "#AAA" }}>Explore some of the websites and databases i have created.</p>
+        <h1 className="md:text-4xl text-3xl">My works</h1>
+        <p className="md:text-2xl text-base" style={{ color: "#AAA" }}>Explore some of the websites and databases i have created.</p>
         <button className="text-white  group cursor-pointer">
             <span className="p-2 text-base md:p-3 rounded-full border border-white text-white group-hover:bg-white group-hover:text-black transition-all duration-300 ease-in-out group-hover:px-8 " onClick={navigate}>view</span> more<BsArrowRight className='inline group-hover:scale-100 group-hover:ml-3 ' />
         </button>
