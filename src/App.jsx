@@ -25,7 +25,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop/>
-      <Navbar />
+      {/* <Navbar /> */}
       {isLoading ? (<LoadingScreen />) : (
         <AnimatePresence>
           <Routes>

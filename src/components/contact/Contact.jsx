@@ -37,7 +37,7 @@ const Contact = () => {
       <div className='flex justify-center h-full'>
         <div className=''>
           <p className='absolute  cursor-pointer -right-16 mt-[450px] md:rotate-90  text-[16px] md:flex justify-center items-center gap-14 sm:bottom-8 md:bottom-[20rem] hidden'>kristinenyaga@gmail.com <div className=' h-24 mt-1 border border-textgray rotate-90'/></p>
-          <div className='flex md:flex-col  justify-between  items-center  absolute md:left-8 bottom-0 md:bottom-[14rem]  cursor-pointer hover:scale-100  smmd:w-0 gap-8'>
+          <div className='md:flex md:flex-col  justify-between  items-center  absolute md:left-8 bottom-0 md:bottom-[14rem]  cursor-pointer hover:scale-100  smmd:w-0 gap-8 hidden'>
             <div className='border border-textgray p-2 md:pp-2.5 rounded-full cursor-pointer  '>
               <FaLinkedinIn  className='text-black' onClick={()=>window.open('https://www.linkedin.com/in/christine-nyaga-89a691248','_blank')}   />
             </div>
@@ -52,10 +52,10 @@ const Contact = () => {
             </div>
           </div>
           <div>
-            <h1 className='md:text-7xl text-4xl border-b border-bordergray text-center md:mt-28'>
+            <h1 className='md:text-7xl text-3xl border-b border-bordergray text-center md:mt-28'>
               Hey there
             </h1>
-            <p className='text-center mt-5'>
+            <p className='text-center mt-5 text-sm'>
               I'm always open to new opportunities. <br />
               Feel free to contact me.
             </p>
@@ -67,12 +67,12 @@ const Contact = () => {
               initial="hidden"
               whileInView="visible"
             >
-              <motion.p variants={item}  className='text-base'>Name</motion.p>
-               <input className='w-full md:w-[40vw] p-1 py-2 rounded-md border border-bordergray bg-white outline-none focus:outline-none focus:border-b focus:border-textgray mb-10 placeholder:text-sm ' placeholder="Enter your name" type="text"/>
-              <motion.p variants={item}>Email</motion.p>
-              <input className='w-full md:w-[40vw] p-1 py-2 rounded-md border border-bordergray bg-white outline-none focus:outline-none mb-10 focus:border-b focus:border-textgray placeholder:text-sm' placeholder="Enter your name" type="email" />
-              <motion.p variants={item}>Message</motion.p>
-              <textarea className='w-full md:w-[40vw] p-1 py-2 rounded-md border border-bordergray bg-white outline-none focus:outline-none h-[20vh] mt-2 focus:border-b focus:border-textgray placeholder:text-sm' placeholder="Example text" type="text" />
+              <motion.p variants={item}  className='text-sm md:text-base'>Name</motion.p>
+               <input className='w-[90vw] md:w-[50vw] p-1 py-2 rounded-md border border-bordergray bg-white outline-none focus:outline-none focus:border-b focus:border-textgray mb-10 placeholder:text-sm ' placeholder="Enter your name" type="text"/>
+              <motion.p variants={item} className='text-sm md:text-base'>Email</motion.p>
+              <input className='w-full md:w-[50vw] p-1 py-2 rounded-md border border-bordergray bg-white outline-none focus:outline-none mb-10 focus:border-b focus:border-textgray placeholder:text-sm' placeholder="Enter your name" type="email" />
+              <motion.p variants={item} className='text-sm md:text-base'>Message</motion.p>
+              <textarea className='w-full md:w-[50vw] p-1 py-2 rounded-md border border-bordergray bg-white outline-none focus:outline-none h-[20vh] mt-2 focus:border-b focus:border-textgray placeholder:text-sm' placeholder="Example text" type="text" />
             </motion.div>
             <button className='w-full h-10 border-bordergray border text-base font_opensans mt-5 text-textgray rounded-md hover:bg-black hover:text-white'>Send</button>
           </div>
