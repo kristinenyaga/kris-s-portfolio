@@ -3,6 +3,7 @@ html{
   scroll-behavior: smooth;
 }
 
+
 .largeheading{
   font-size: 61.04px;
 }
@@ -55,7 +56,7 @@ line-height: normal;
   position: relative;
   width: 600px;
   height: 600px;
-  border: 1px solid rgb(211, 211, 245);
+  border: 0.01px solid rgb(211, 211, 245);
   border-radius: 50%;
   overflow: hidden;
   z-index: -1;
@@ -86,8 +87,9 @@ line-height: normal;
   position: relative;
   animation: rotation 5s linear 2s 1 ;
   border-radius: 50%;
-  padding: 250px;
-  border: 1px solid #222222;
+  padding: 130px;
+  border: 1px solid #f2eded;
+  margin-top: 5px;
   /* background-color: #0a0a0a; */
 }
 .circle{
@@ -99,8 +101,15 @@ line-height: normal;
 
 }
 
+.circle2{
+  width: 220px;
+  border: 1px solid #f9f9f9;
+  height: 220px;
+  border-radius: 50%;
 
-.electron::before {
+}
+
+/* .electron::before {
   content: "";
   width: 20px;
   height: 20px;
@@ -110,7 +119,7 @@ line-height: normal;
   left: -50px;
   border-radius: 50%;
   margin: 51px;
-}
+} */
 
 
 @keyframes rotation {
@@ -166,12 +175,15 @@ line-height: normal;
     left: -33px;
     margin: 31px;
   }
+
 }
 
 /* Media Query for Medium Screens (e.g., tablets) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .electron {
-    padding: 200px; /* Adjust the padding for medium screens */
+    width: 100px;
+    height: 100px;
+    padding: 150px; /* Adjust the padding for medium screens */
     margin-top: 40px;
   }
 
@@ -197,4 +209,42 @@ line-height: normal;
     left: -50px;
     margin: 41px;
   }
+}
+
+  .project-container {
+    transition: background-color 0.3s ease; /* Define the transition */
+  }
+
+@media (max-width: 728px){
+  .scroll-down{
+    position: absolute;
+  }
+}
+
+/* LoadingScreen.css */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
