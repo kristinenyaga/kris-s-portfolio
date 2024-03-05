@@ -32,10 +32,21 @@ const sideVariants = {
     }
   }
 };
+  const scrollToPosition = () => {
+    const nextSection = document.getElementById('projects'); // You can adjust the selector as per your HTML structure
+    
+    if (nextSection) {
+      // Scroll to the top position of the next section
+      window.scrollTo({
+        top: nextSection.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+    };
 const Banner = () => {
 
   return (
-    <motion.div className="banner h-[100vh] mt-0  text-textgray font_opensans " variants={banner}>
+    <motion.div className="banner z-40 h-[100vh] mt-0  text-textgray font_opensans " variants={banner}>
       <div className=" border-b border-gray ">
         <BannerRowTop title={"my"} />
       </div>
@@ -56,8 +67,8 @@ const AnimatedLetters = ({ title }) => (
     initial="initial"
     animate="animate"
   >
-    {[...title].map((letter) => (
-      <motion.span className="row-letter" variants={letterAni}>{letter}</motion.span>
+    {[...title].map((letter,index) => (
+      <motion.span className="row-letter" key={index} variants={letterAni}>{letter}</motion.span>
     ))}
   </motion.span>
 );
@@ -70,7 +81,7 @@ const BannerRowTop = ({ title }) => {
       </div>
     <motion.div className="text-base mt-16 left-0 max-w-sm pr-10" initial="initial" animate="animate" variants={sideVariants}>
       <motion.span className=" font_opensans hidden md:block " variants={sideVariants}>
-        We are specialised in setting up the foundation of your brand and setting you up for success.
+        Explore are some of the websites and databases i have developed.
       </motion.span>
     </motion.div>
     </div>
@@ -82,8 +93,8 @@ const BannerRowBottom = ({ title }) => {
     <div className={"banner-row center mod"}>
         <AnimatedLetters title={title} />
 
-      <div className="flex justify-center items-center scroll">
-        <p className="text-center flex justify-center items-center bg-black text-lightgray  rounded-full h-24 w-24 scroll-down bottom-10">Scroll down</p>
+      <div className="flex justify-center items-center scroll" onClick={scrollToPosition}>
+        <p className="text-center flex justify-center items-center bg-black text-lightgray  rounded-full h-24 w-24 scroll-down bottom-10 cursor-pointer" >Scroll down</p>
       </div>
     </div>
   );
