@@ -47,32 +47,33 @@ const ProjectList = () => {
     <section ref={container} className='' id="projects">
       {projectsList.map((slide, index) => {
         return (
-          <section className='h-[80vh] text-textgray flex justify-center' key={index}>
-            <div className='flex flex-col-reverse  lg:flex-row'>
-              <div className='lg:w-[35% h-[40vh]'>
-                <div className='font_albertsans leading-7 flex flex-col justify-center  h-full px-5 lg:pl-10 lg:max-w-[45rem]'>
+          <section className='h-[70vh] md:h-[100vh] xl:h-[60vh] text-textgray flex justify-center' key={index}>
+            <div className='flex flex-col lg:gap-40 lg:flex-row'>
+              <div className=''>
+                <div className='font_albertsans leading-7 flex flex-col justify-center items-center px-5 lg:pl-10 lg:max-w-[45rem]'>
                   <h1 className='text-3xl mb-2'>{slide.name}</h1>
-                  <p className='text-sm smsm:text-[base] text-textgray md:text-[18px]'>{slide.description}</p>
+                  <p className='text-sm smsm:text-[base] text-textgray md:text-[16px]'>{slide.description}</p>
                   <div className='flex gap-10 max-w-[90%] text-[base] mt-4'>
-                    <button className='border-b  hover:border hover:ease-in hover:duration-100 w-[10rem] h-10 border-black text-textgray rounded-sm ' onClick={() => window.open(slide.github, '_blank')}>Github</button>
+                    <button className='border-b  hover:border hover:ease-in hover:duration-100 w-[10rem] h-10 border-bordergray text-textgray rounded-sm ' onClick={() => window.open(slide.github, '_blank')}>Github</button>
                     {slide.livelink ? (
                       
-                      <button className='border-b hover:border hover:ease-in hover:duration-100 w-[10rem] h-10 border-black text-textgray rounded-sm' onClick={() => window.open(slide.livelink, '_blank')}>link</button>) : ''}
+                      <button className='border-b hover:border hover:ease-in hover:duration-100 w-[10rem] h-10 border-bordergray text-textgray rounded-sm' onClick={() => window.open(slide.livelink, '_blank')}>link</button>) : ''}
 
                   </div>
                 </div>
               </div>
               
-              <div className='lg:w-[65%'>
+              <div className='lg:w-[65%] flex justify-center '>
                 <div
                   ref={addToRef}
-                  className='mask lg:h-[60vh] h-[40vh] w-screen lg:w-[50vw] mb-10'
-                  style={{
-                    backgroundImage: `url(${slide.image})`,
-                    backgroundPosition: "center",
-                    backgroundSize: "cover",
-                  }}
+                  className=' lg:h-[60vh] h-[40vh] w-[90vw] lg:w-[40vw] '
+                  // style={{
+                  //   backgroundImage: `url(${slide.image})`,
+                  //   backgroundPosition: "center",
+                  //   backgroundSize: "cover",
+                  // }}
                 >
+                  <img src={ slide.image} />
                 </div>
                 </div>
 
@@ -82,18 +83,18 @@ const ProjectList = () => {
         )
       })}
       <div>
-        <section className=' text-textgray flex flex-col  lg:flex-row justify-center mb-40'>
+        <section className=' text-textgray flex flex-col justify-center mb-40'>
         {projects.map((slide, index) => {
                 
           return (
-            <section className=' text-textgray flex flex-row justify-center w-[100%] lg:w-[45%]' key={index}>
+            <section className=' h-[60vh] text-textgray flex flex-row justify-center w-[100%] lg:w-[45%]' key={index}>
                 <div className='font_albertsans leading-7 flex flex-col justify-center  h-full px-5 lg:pl-10'>
                   <h1 className='text-3xl mb-4'>{slide.name}</h1>
-                  <p className='text-sm smsm:text-base text-textgray md:text-[18px]'>{slide.description}</p>
+                  <p className='text-sm smsm:text-[base] text-textgray md:text-[16px]'>{slide.description}</p>
                   <div className='flex gap-10 max-w-[90%] text-sm mt-4 mb-5 '>
-                    <button className='border-b  hover:border hover:ease-in hover:duration-100 w-[10rem]  hover:duration-100-black text-textgray rounded-sm ' onClick={() => window.open(slide.github, '_blank')}>Github</button>
+                    <button className='border-b  hover:border hover:ease-in hover:duration-100 w-[10rem]  hover:duration-100-black text-textgray rounded-sm border-bordergray ' onClick={() => window.open(slide.github, '_blank')}>Github</button>
                     {slide.livelink ? (
-                      <button className='border-b  hover:border hover:ease-in hover:duration-100 w-[10rem] h-10 border-black text-textgray rounded-sm' onClick={() => window.open(slide.livelink, '_blank')}>link</button>) : ''}
+                      <button className='border-b  hover:border hover:ease-in hover:duration-100 w-[10rem] h-10 border-bordergray text-textgray rounded-sm' onClick={() => window.open(slide.livelink, '_blank')}>link</button>) : ''}
                   </div>
                 </div>
             </section>

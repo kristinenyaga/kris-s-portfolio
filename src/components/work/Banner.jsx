@@ -46,17 +46,13 @@ const sideVariants = {
 const Banner = () => {
 
   return (
-    <motion.div className="banner z-40 h-[100vh] mt-0  text-textgray font_opensans " variants={banner}>
-      <div className=" border-b border-gray ">
+    <motion.div className="banner z-40 mt-0 text-textgray font_opensans h-[100vh]" variants={banner}>
+      <div className="border-b border-gray ">
         <BannerRowTop title={"my"} />
       </div>
       <div className="border-b border-gray ">
-      <BannerRowBottom title={"projects "} />
+        <BannerRowBottom title={"projects "} />
       </div>
-
-
-      {/* <BannerRowBottom title={"studio"} /> */}
-
     </motion.div>
   );
 };
@@ -76,10 +72,10 @@ const AnimatedLetters = ({ title }) => (
 const BannerRowTop = ({ title }) => {
   return (
     <div className={"banner-row center"}>
-      <div className=" text-[250px] font_opensans pr-10">
+      <div className="text-[200px] font_opensans pr-10">
         <AnimatedLetters title={title} />
       </div>
-    <motion.div className="text-base mt-16 left-0 max-w-sm pr-10" initial="initial" animate="animate" variants={sideVariants}>
+    <motion.div className="text-base md:mt-16 left-0 max-w-sm pr-10" initial="initial" animate="animate" variants={sideVariants}>
       <motion.span className=" font_opensans hidden md:block " variants={sideVariants}>
         Explore are some of the websites and databases i have developed.
       </motion.span>
@@ -94,20 +90,12 @@ const BannerRowBottom = ({ title }) => {
         <AnimatedLetters title={title} />
 
       <div className="flex justify-center items-center scroll" onClick={scrollToPosition}>
-        <p className="text-center flex justify-center items-center bg-black text-lightgray  rounded-full h-24 w-24 scroll-down bottom-10 cursor-pointer" >Scroll down</p>
+        <p className="text-center flex justify-center items-center bg-black text-lightgray  rounded-full h-24 w-24 scroll-down bottom-20 cursor-pointer" >Scroll down</p>
       </div>
     </div>
   );
 };
 
-const BannerRowCenter = ({ title, playMarquee }) => {
-  return (
-    <div className={`banner-row marquee  ${playMarquee && "animate"}`}>
-      <div className="marquee__inner">
-        <AnimatedLetters title={title} />
-      </div>
-    </div>
-  );
-};
+
 
 export default Banner;

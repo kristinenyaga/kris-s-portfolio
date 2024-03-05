@@ -91,7 +91,7 @@ const About = () => {
             <p className=' opacity-70'>About</p>
             <p className='text-4xl text-textgray mb-5'>My life story</p>
             <p className='mb-2 text-base'>Hey, I'm Kristine Nyaga a fullstack and ui/ux designer based in Kenya. I am currently pursuing my Bachelor's degree in Computer Science.</p>
-            <p className='text-base'>full-stack developer dedicated to creating long-lasting experiences through web development. With expertise in both frontend and backend technologies, I specialize in building user-friendly interfaces and robust backend systems.full-stack developer dedicated to creating long-lasting experiences through web development. With expertise in both frontend and backend technologies, I specialize in building user-friendly interfaces and robust backend systems.  </p>
+            <p className='text-base'>I am dedicated to creating long-lasting experiences through web development. With expertise in both frontend and backend technologies, I specialize in building user-friendly interfaces and robust backend systems.  </p>
           </div>
           <div className='radial'/>
         </div>
