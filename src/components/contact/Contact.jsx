@@ -1,6 +1,5 @@
 import { FaLinkedinIn } from 'react-icons/fa';
-import { BsWhatsapp } from 'react-icons/bs';
-import { BiSolidPhoneCall } from 'react-icons/bi';
+import { BsGithub } from 'react-icons/bs'
 import { BiLogoGmail } from 'react-icons/bi';
 import { BsTwitter } from 'react-icons/bs'
 import { motion } from "framer-motion";
@@ -34,29 +33,26 @@ const item = {
 
 const Contact = () => {
   return (
-    <div className='h-[100vh] bg-lightgray text-textgray font_opensans relative'>
+    <div className='h-[100vh] bg-white text-textgray font_opensans relative'>
       <div className='flex justify-center h-full'>
         <div className=''>
-          <p className='absolute  cursor-pointer -right-20 mt-[450px] md:rotate-90  text-[16px] md:flex justify-center items-center gap-14 sm:bottom-8 md:bottom-[20rem] hidden'>nyagakristine@gmail.com <div className=' h-24 mt-1 border border-darkblue rotate-90'/></p>
+          <p className='absolute  cursor-pointer -right-16 mt-[450px] md:rotate-90  text-[16px] md:flex justify-center items-center gap-14 sm:bottom-8 md:bottom-[20rem] hidden'>kristinenyaga@gmail.com <div className=' h-24 mt-1 border border-textgray rotate-90'/></p>
           <div className='flex md:flex-col  justify-between  items-center  absolute md:left-8 bottom-0 md:bottom-[14rem]  cursor-pointer hover:scale-100  smmd:w-0 gap-8'>
-            <div className='border border-darkblue p-2 md:pp-2.5 rounded-full bg-darkblue '>
-              <FaLinkedinIn  className='text-white'   />
+            <div className='border border-textgray p-2 md:pp-2.5 rounded-full cursor-pointer  '>
+              <FaLinkedinIn  className='text-black' onClick={()=>window.open('https://www.linkedin.com/in/christine-nyaga-89a691248','_blank')}   />
             </div>
-            <div className='border border-darkblue bg-darkblue p-2 rounded-full'>
-              <BsWhatsapp  className='text-white' />
+            <div className='border border-textgray  p-2 rounded-full'>
+              <BsGithub  className='text-black' onClick={()=>window.open('https://github.com/kristinenyaga?tab=overview&from=2024-03-01&to=2024-03-02','_blank')} />
             </div>
-            <div className='border border-darkblue bg-darkblue p-2 rounded-full'>
-              <BiSolidPhoneCall className="text-white" />
+            <div className='border border-textgray  p-2 rounded-full'>
+              <BiLogoGmail className="text-black" onClick={()=>window.open('mailto:kristinenyaga@gmail.com')}/>
             </div>
-            <div className='border border-darkblue bg-darkblue p-2 rounded-full'>
-              <BiLogoGmail className="text-white"/>
-            </div>
-            <div className='border border-darkblue bg-darkblue p-2 rounded-full'>
-              <BsTwitter  className="text-white"/>
+            <div className='border border-textgray  p-2 rounded-full'>
+                <BsTwitter className="text-black" onClick={ ()=>window.open('https://x.com/Itsher57489061?t=2u95OhLY7XwEA3DunzlnIQ&s=03','_blank')} />
             </div>
           </div>
           <div>
-            <h1 className='md:text-7xl text-5xl border-b border-bordergray text-center md:mt-28'>
+            <h1 className='md:text-7xl text-4xl border-b border-bordergray text-center md:mt-28'>
               Hey there
             </h1>
             <p className='text-center mt-5'>
@@ -72,15 +68,15 @@ const Contact = () => {
               whileInView="visible"
             >
               <motion.p variants={item}  className='text-base'>Name</motion.p>
-               <input className='w-full md:w-[40vw] p-1 py-2 rounded-md border border-bordergray bg-lightgray outline-none focus:outline-none focus:border-b focus:border-textgray mb-10 placeholder:text-sm ' placeholder="Enter your name" type="text"/>
+               <input className='w-full md:w-[40vw] p-1 py-2 rounded-md border border-bordergray bg-white outline-none focus:outline-none focus:border-b focus:border-textgray mb-10 placeholder:text-sm ' placeholder="Enter your name" type="text"/>
               <motion.p variants={item}>Email</motion.p>
-              <input className='w-full md:w-[40vw] p-1 py-2 rounded-md border border-bordergray bg-lightgray outline-none focus:outline-none mb-10 focus:border-b focus:border-textgray placeholder:text-sm' placeholder="Enter your name" type="email" />
+              <input className='w-full md:w-[40vw] p-1 py-2 rounded-md border border-bordergray bg-white outline-none focus:outline-none mb-10 focus:border-b focus:border-textgray placeholder:text-sm' placeholder="Enter your name" type="email" />
               <motion.p variants={item}>Message</motion.p>
-              <textarea className='w-full md:w-[40vw] p-1 py-2 rounded-md border border-bordergray bg-lightgray outline-none focus:outline-none h-[20vh] mt-2 focus:border-b focus:border-textgray placeholder:text-sm' placeholder="Example text" type="text" />
+              <textarea className='w-full md:w-[40vw] p-1 py-2 rounded-md border border-bordergray bg-white outline-none focus:outline-none h-[20vh] mt-2 focus:border-b focus:border-textgray placeholder:text-sm' placeholder="Example text" type="text" />
             </motion.div>
-            <button className='w-full h-10 bg-darkblue text-base font_opensans mt-5 text-white rounded-md'>Send</button>
+            <button className='w-full h-10 border-bordergray border text-base font_opensans mt-5 text-textgray rounded-md hover:bg-black hover:text-white'>Send</button>
           </div>
-        </div>        
+        </div>         
         </div>
     </div>
     
