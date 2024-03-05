@@ -6,9 +6,9 @@ import { BsTwitter } from 'react-icons/bs'
 import { motion } from "framer-motion";
 
 const container = {
-  hidden: { opacity: 0,scale:0, y: 150,delay:0.5},
+  hidden: { opacity: 0,scale:0, y: 150,delay:1.5},
   visible: {
-    delay: 0.5,
+    delay: 1.5,
     opacity: 1,
     scale: 1,
     y: 0,
@@ -16,7 +16,7 @@ const container = {
 
  
     transition: {
-      delayChildren: 0.3,
+      delayChildren: 1,
       staggerChildren: 0.4,
       duration:0.4
     }
