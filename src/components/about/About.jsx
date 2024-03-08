@@ -53,7 +53,7 @@ const About = () => {
             </div> 
             <div className="flex flex-col md:flex-row justify-between lg:px-28 md:mt-20 lg:mt-0 ">
               <div className='flex justify-center items-center place-content-center place-items-center '>
-                <p className="font_albertsans lg:max-w-xl max-w-[33em]  text-[14px] mt-10 lg:mt-0 p-2 ">Full-stack developer dedicated to creating long-lasting experiences through web development. With expertise in both frontend and backend technologies</p>
+                <p className="font_albertsans lg:max-w-xl max-w-[33em]  text-[14px] mt-10 lg:mt-0 p-2 ">Full-stack developer dedicated to creating long-lasting experiences through web development. With expertise in both frontend and backend technologis</p>
               </div>
               <div className='flex justify-center'>
                 <p className="flex justify-center items-center w-[8rem] h-[8rem] text-sm border rounded-full  bottom-0 scroll-down">
