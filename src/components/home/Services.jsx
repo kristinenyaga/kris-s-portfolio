@@ -7,7 +7,7 @@ const Services = () => {
     nav('/contact')
   }
   return (
-    <div className='m-auto w-[90vw] lg:mt-28 section font_albertsans bg-white panel'>
+    <div className='m-auto w-[90vw] h-[100vh] lg:mt-28 section font_albertsans bg-white panel'>
       <div className='flex flex-col justify-center items-center'>
         <p className='md:text-3xl text-2xl text-black flex justify-center items-center gap-2'><div className='w-1.5 h-1.5 rounded-full bg-black' />Services</p>
         <p className='md:text-3xl text-2xl font-thin text-center'>What i can do</p>
