@@ -58,7 +58,7 @@ const Navbar = () => {
       opacity: 0,
       y:-200,
       transition: {
-        delay:5
+        delay:1
       }
     },
     animate: {
@@ -67,7 +67,7 @@ const Navbar = () => {
       duration:0.7,
       transition: {
         ease: [0.12, 0, 0.39, 0],
-        delay:5
+        delay:1
       }
     }
   }
