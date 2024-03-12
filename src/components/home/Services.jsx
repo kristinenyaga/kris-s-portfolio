@@ -16,7 +16,7 @@ const Services = () => {
       <div className='flex flex-col  justify-center mx-auto max-w-7xl'>
         <div className='flex items-center justify-between lg:mt-20'>
           <div>
-            <div className='flex flex-col gap-4'>
+            <div className='flex flex-col md:gap-4 gap-1'>
               <p className='md:text-3xl text-2xl text-darkblue '>UI/UX design</p>
                 <p className=' leading-7 text-sm lg:text-base
                   tracking-wide  max-w-xl'>Ready to embark on a design adventure with me? <br /> Let's work together to create user-friendly and captivating UI/UX designs for your project. Whether it's a web app, mobile app, I'm here to bring your project to life.</p>
@@ -27,7 +27,7 @@ const Services = () => {
         </div>
         <div className='flex lg:gap-10 flex-row-reverse items-center justify-between lg:mt-20 mt-5'>
           <div>
-            <div className='flex flex-col gap-4'>
+            <div className='flex flex-col md:gap-4 gap-1'>
               <p className='md:text-3xl text-2xl text-darkblue '>web Development</p>
                 <p className='text-sm lg:text-base
                   tracking-wide leading-7 max-w-xl'>Ready to embark on a design adventure with me? <br /> Let's work together to create user-friendly and captivating UI/UX designs for your project. Whether it's a web app, mobile app, I'm here to bring creativity to your project.</p>
