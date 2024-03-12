@@ -4,7 +4,7 @@ function LoadingScreen() {
   return (
     <div className="loading-screen  bg-black text-white">
       <InfinitySpin color="grey" />
-      <p className='font_opensans text-5xl opacity-70'>kris's portfolio...</p>
+      <p className='font_opensans lg:text-5xl text-3xl opacity-70'>kris's portfolio...</p>
     </div>
   );
 }
