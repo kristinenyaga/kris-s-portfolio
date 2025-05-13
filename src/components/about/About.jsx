@@ -85,78 +85,63 @@ const About = () => {
           </div>
         </div>
       </section>
-      <div className="  w-[100vw] mt-28 relative mx-auto ">
-        <div className="flex justify-between lg:px-28 lg:mt-40">
-          <div className='p-3 max-w-4xl text-[18px] font_albertsans mb-2'>
-            <p className=' opacity-70'>About</p>
-            <p className='text-4xl text-textgray mb-5'>My life story</p>
-            <p className='mb-2 text-base'>Hey, I'm Kristine Nyaga a fullstack and ui/ux designer based in Kenya. I am currently pursuing my Bachelor's degree in Computer Science.</p>
-            <p className='text-base'>I am dedicated to creating long-lasting experiences through web development. With expertise in both frontend and backend technologies, I specialize in building user-friendly interfaces and robust backend systems.  </p>
+
+  {/* Skills Section */}
+  <section className=" w-full px-4 lg:px-28 py-16 bg_image ">
+    <p className="text-sm uppercase tracking-wide">Skills</p>
+    <h2 className="text-3xl font-semibold mb-8">What I Can Do</h2>
+    <div className="grid md:grid-cols-2 gap-8">
+      {servicesList.map((item, index) => (
+        <div key={index} className="flex items-start gap-4">
+          <img src={item.image} alt={item.name} className="h-6 w-6 mt-1" />
+          <div>
+            <h3 className="text-xl font-medium mb-1">{item.name}</h3>
+            <p className="text-sm text-gray-700">{item.description}</p>
           </div>
-          <div className='radial'/>
         </div>
-      </div>
-      <div className='smsm:h-[70vh] lg:h-[55vh] h-[100vh] w-[100vw] lg:px-28 p-3 font_albertsans animation_container flex flex-col justify-center '>
-        <div className='text-[18px]'>
-          <p className=' opacity-70'>My Skills</p>
-          <p className='text-3xl text-textgray mb-5'>What i can do</p>
-        </div>
-        <div className='flex justify-between flex-wrap gap-5' >
-          {servicesList.map((item, index) => (
-            <div key={index} className=''>
-              <p className='text-xl '>{item.name}</p>
-              <div className='flex gap-2'>
-                <img src={item.image} className='h-5 ' />
-                <p className='max-w-2xl text-sm md:text-base'>{item.description}</p>
-              </div>
-            </div>
+      ))}
+    </div>
+  </section>
+
+  {/* Technologies Section */}
+  <section className="w-full px-4 lg:px-28 py-20 bg_image">
+    <p className="text-sm uppercase tracking-wide text-gray-500">What I Use</p>
+    <h2 className="text-3xl font-semibold mb-6">Tech Stack</h2>
+    <p className="max-w-3xl text-base leading-relaxed mb-8">I work across the stack to build responsive, high-performance apps. These are the tools I rely on daily:</p>
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      {/* Frontend */}
+      <div>
+        <h4 className="text-lg font-medium mb-2">Frontend</h4>
+        <div className="flex flex-wrap gap-2">
+          {["HTML", "CSS", "JavaScript", "React", "TailwindCSS"].map((tech) => (
+            <span key={tech} className="bg-black text-white text-xs font-medium px-3 py-1 rounded-full">{tech}</span>
           ))}
         </div>
       </div>
-      <div className="h-[60vh] w-[100vw] mx-auto mt-20">
-        <div className="flex justify-between lg:px-28 px-3 ">
-          <div className=' max-w-4xl text-[18px] font_albertsans mb-2'>
-            <p className=' opacity-70'>
-              what i use
-            </p>
-            <p className='text-3xl text-textgray mb-2'>Technologies</p>
-            <p className='text-base max-w-3xl'>As a full-stack developer and UI/UX designer, I leverage a variety of technologies to bring projects to life. From front-end frameworks like React.js to back-end technologies such as Node.js and Django, I utilize a diverse toolkit to create dynamic applications.</p>
-            <div className='flex justify-between  mt-6  text-base'>
-              <div>
-                <p className='text-[20px]'>Frontend</p>
-                <div className='text-[14px] pl-1.5'> 
-                  <p>Html</p>
-                  <p>Css</p>
-                  <p>ReactJs</p>
-                  <p>TailwindCSS</p>
-                  <p>JavaScript</p>
-                </div>
 
-              </div>
-              <div>
-                <p className='text-[20px]'>Backend</p>
-                <div className='text-[14px] pl-1.5'>
-                  <p>Ruby on Rails</p>
-                  <p>Django</p>
-                  <p>NodeJs</p>
-                  <p>ExpressJs</p>
-                  <p>SQL</p>
-                </div>
-              </div>
-              <div>
-                <p className='text-[20px]'>Others</p>
-                <div className='text-[14px] pl-1.5'>
-                  <p>Figma</p>
-                  <p>Redux</p>
-                  <p>Docker</p>
-                  <p>Git</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='radial'/>
+      {/* Backend */}
+      <div>
+        <h4 className="text-lg font-medium mb-2">Backend</h4>
+        <div className="flex flex-wrap gap-2">
+          {["Node.js", "Express", "Django", "Ruby on Rails", "SQL"].map((tech) => (
+            <span key={tech} className="bg-black text-white text-xs font-medium px-3 py-1 rounded-full">{tech}</span>
+          ))}
         </div>
       </div>
+
+      {/* Tools */}
+      <div>
+        <h4 className="text-lg font-medium mb-2">Others</h4>
+        <div className="flex flex-wrap gap-2">
+          {["Figma", "Docker", "Redux", "Git"].map((tool) => (
+            <span key={tool} className="bg-black text-white text-xs font-medium px-3 py-1 rounded-full">{tool}</span>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
 
     </div>
   )

@@ -1,6 +1,5 @@
 import { FaLinkedinIn } from 'react-icons/fa';
 import { BiLogoGmail } from 'react-icons/bi';
-import { BsTwitter } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
 import { NavLink } from "react-router-dom";
 
@@ -25,9 +24,6 @@ const Footer = () => {
             </div>
             <div className='border border-textgray  p-2 rounded-full'>
               <BiLogoGmail className="text-white" onClick={()=>window.open('mailto:kristinenyaga@gmail.com')}/>
-            </div>
-            <div className='border border-textgray  p-2 rounded-full'>
-                <BsTwitter className="text-white" onClick={ ()=>window.open('https://x.com/Itsher57489061?t=2u95OhLY7XwEA3DunzlnIQ&s=03','_blank')} />
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { BsGithub } from 'react-icons/bs'
 import { BiLogoGmail } from 'react-icons/bi';
 import { BsTwitter } from 'react-icons/bs'
 import { motion } from "framer-motion";
+import { useState } from 'react';
 
 const container = {
   hidden: { opacity: 0,scale:0, y: 150,delay:1.5},
@@ -32,6 +33,38 @@ const item = {
 };
 
 const Contact = () => {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [isSending, setIsSending] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSending(true);
+    console.log('sending')
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/859360aa3bec8ea0610b4b3db60f90c7', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setSent(true);
+        setFormData({ name: '', email: '', message: '' });
+      }
+    } catch (error) {
+      console.error("Error sending message", error);
+    } finally {
+      setIsSending(false);
+    }
+  };
   return (
     <div className='h-[100vh] bg-white text-textgray font_opensans relative'>
       <div className='flex justify-center h-full'>
@@ -55,10 +88,15 @@ const Contact = () => {
             <h1 className='md:text-7xl text-3xl border-b border-bordergray text-center md:mt-28'>
               Hey there
             </h1>
-            <p className='text-center mt-5 text-sm'>
-              I'm always open to new opportunities. <br />
+            <p className='text-center mt-5 text-base'>
+              I&apos;m always open to new opportunities. <br />
               Feel free to contact me.
             </p>
+            <p className="block md:hidden mt-10 text-center text-base">
+              @ 0792032890 <br />
+              or drop me a message below!
+            </p>
+
 
             <motion.div
               className='mt-10 
@@ -67,14 +105,38 @@ const Contact = () => {
               initial="hidden"
               whileInView="visible"
             >
-              <motion.p variants={item}  className='text-sm md:text-base'>Name</motion.p>
-               <input className='w-[90vw] md:w-[50vw] p-1 py-2 rounded-md border border-bordergray bg-white outline-none focus:outline-none focus:border-b focus:border-textgray mb-10 placeholder:text-sm ' placeholder="Enter your name" type="text"/>
+              {sent && (
+                
+                <p className="text-green-600 mt-4 text-center">Message sent successfully!</p>
+              )}
+              <form onSubmit={handleSubmit}
+              >
+                <motion.p variants={item} className='text-sm md:text-base'>Name</motion.p>
+                
+                <input className='w-[90vw] md:w-[50vw] p-1 py-2 rounded-md border border-bordergray bg-white outline-none focus:outline-none focus:border-b focus:border-textgray mb-10 placeholder:text-sm ' placeholder="Enter your name"
+                  type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required/>
               <motion.p variants={item} className='text-sm md:text-base'>Email</motion.p>
-              <input className='w-full md:w-[50vw] p-1 py-2 rounded-md border border-bordergray bg-white outline-none focus:outline-none mb-10 focus:border-b focus:border-textgray placeholder:text-sm' placeholder="Enter your name" type="email" />
+                <input required className='w-full md:w-[50vw] p-1 py-2 rounded-md border border-bordergray bg-white outline-none focus:outline-none mb-10 focus:border-b focus:border-textgray placeholder:text-sm' placeholder="Enter your email" type="email"
+                  name="email"
+                value={formData.email}
+                onChange={handleChange}
+                 />
               <motion.p variants={item} className='text-sm md:text-base'>Message</motion.p>
-              <textarea className='w-full md:w-[50vw] p-1 py-2 rounded-md border border-bordergray bg-white outline-none focus:outline-none h-[20vh] mt-2 focus:border-b focus:border-textgray placeholder:text-sm' placeholder="Example text" type="text" />
+                <textarea required className='w-full md:w-[50vw] p-1 py-2 rounded-md border border-bordergray bg-white outline-none focus:outline-none h-[20vh] mt-2 focus:border-b focus:border-textgray placeholder:text-sm' placeholder="Example text" type="text"
+                  name="message"
+                value={formData.message}
+                onChange={handleChange}
+                />
+                <button type="submit" disabled={isSending} className='lg:w-[96%] w-full h-10 border-bordergray border text-base font_opensans mt-5 text-textgray rounded-md hover:bg-black hover:text-white'> {isSending ? 'Sending...' : 'Send'}</button>
+                
+              </form>
+
             </motion.div>
-            <button className='w-full h-10 border-bordergray border text-base font_opensans mt-5 text-textgray rounded-md hover:bg-black hover:text-white'>Send</button>
+
           </div>
         </div>         
         </div>

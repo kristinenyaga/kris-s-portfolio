@@ -1,7 +1,6 @@
 import "./sass/main.scss";
 import {AnimatePresence, LayoutGroup } from "framer-motion";
 import Banner from "./Banner";
-import Loader from "./Loader";
 import ProjectList from './ProjectList';
 import './work.css'
 const Work = () => {

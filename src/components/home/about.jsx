@@ -1,33 +1,56 @@
 import { BsArrowRight } from 'react-icons/bs';
 import { useNavigate } from "react-router-dom";
+
 const About = () => {
-  const nav = useNavigate()
+  const nav = useNavigate();
   const navigate = () => {
-    nav('/about')
-  }
+    nav('/about');
+  };
+
   return (
-    <div className='bg-black h-[100vh] text-lightgray font_albertsans panel' id='about me'>
-      <div className="h-[96vh] mx-auto max-w-7xl flex justify-center flex-col sm:p-2 lg:p-4 font_albertsans section">
-        <div className='flex justify-between items-center flex-col lg:flex-row gap-5 '>
-          <div className=' flex flex-col gap-3 '>
-            <div className=' text-xl md:text-xl lg:text-left font-light'>
-              <p className='text-xl opacity-10'>kristine nyaga</p>
-              <p className='lg:text-[80px] md:text-7xl text-5xl'>who am i</p>
-            </div>
+    <div className="bg-gradient-to-br from-black via-zinc-900 to-black text-lightgray font_albertsans panel" id="about me">
+      <div className="min-h-screen mx-auto max-w-7xl flex justify-center flex-col sm:p-4 lg:p-8 section">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-10">
+          
+          {/* Left Side - Heading */}
+          <div className="text-left w-full lg:w-1/2">
+            <p className="text-2xl text-gray-500 uppercase tracking-widest opacity-40">Kristine Nyaga</p>
+            <h2 className="text-white text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mt-2">
+              Who am I, really?
+            </h2>
+            <p className=" italic text-lg mt-3">A curious mind creating beautiful things ✨</p>
           </div>
 
-          <div className=" relative flex flex-col gap-5 items-center justify-center max-w-3xl lg:text-[18px] md:text-base leading-8 text-sm ">   
-            <p className=''>As a full-stack developer and UI/UX designer, I possess a diverse skill set to create seamless digital experiences.I have expertise in both front-end and back-end technologies, allowing me to craft functional applications. My proficiency spans across various programming languages, frameworks, and databases, empowering me to build dynamic and responsive user interfaces while ensuring smooth functionality. </p>
-            <p>My UI/UX design skills enable me to conceptualize, prototype, and design interfaces that prioritize user needs and enhance overall usability. By seamlessly integrating development and design principles, I deliver engaging and user-centric digital solutions.</p>
-            <button className="text-white  group cursor-pointer">
-            <span className="p-2 text-base md:p-3 rounded-full border border-white text-white group-hover:bg-white group-hover:text-black transition-all duration-300 ease-in-out group-hover:px-8" onClick={navigate}>more about</span> me <BsArrowRight className='inline group-hover:scale-100 group-hover:ml-3 ' />
-          </button>
+          {/* Right Side - Bio */}
+          <div className="w-full lg:w-1/2 flex flex-col gap-6 text-gray-300 text-base leading-relaxed">
+            <p>
+              I&apos;m a <span className=" font-medium">full-stack developer</span> and
+              <span className="font-medium"> UI/UX designer</span> with a strong focus on building thoughtful, user-centered digital experiences.
+              My work bridges design and engineering to create products that are not only functional, but intuitive and responsive across platforms.
+            </p>
+            <p>
+              With a background in both front-end and back-end development, I bring a systems-thinking approach to projects—from prototyping and design systems to scalable architecture and clean, maintainable code.
+            </p>
+            <p className="">
+              I care about simplicity, accessibility, and building things that make sense—for users, teams, and businesses.
+            </p>
 
+
+            <button 
+              className="text-white group self-start cursor-pointer mt-6"
+              onClick={navigate}
+            >
+              <span className="p-2 text-base md:p-3 rounded-full border border-white text-white group-hover:bg-white group-hover:text-black transition-all duration-300 ease-in-out group-hover:px-8 mr-2">
+                more about me
+              </span>
+              <BsArrowRight className=" inline group-hover:ml-3 group-hover:translate-x-1 transition-transform duration-300" />
+            </button>
           </div>
+
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default About;

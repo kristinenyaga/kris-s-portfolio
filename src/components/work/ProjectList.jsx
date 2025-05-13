@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react'
 import { projectsList,projects } from './projects'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { BsArrowRight } from 'react-icons/bs'
 
 import './work.css'
 const ProjectList = () => {
@@ -42,67 +41,31 @@ const ProjectList = () => {
       panel.current.push(el)
     }
   }
+const truncateText = (text, maxLength) =>
+  text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
 
   return (
-    <section ref={container} className='' id="projects">
-      {projectsList.map((slide, index) => {
-        return (
-          <section className='h-[70vh] md:h-[100vh] xl:h-[60vh] text-textgray flex justify-center' key={index}>
-            <div className='flex flex-col lg:gap-40 lg:flex-row'>
-              <div className=''>
-                <div className='font_albertsans leading-7 flex flex-col justify-center items-center px-5 lg:pl-10 lg:max-w-[45rem]'>
-                  <h1 className='text-3xl mb-2'>{slide.name}</h1>
-                  <p className='text-sm smsm:text-[base] text-textgray md:text-[16px]'>{slide.description}</p>
-                  <div className='flex gap-10 max-w-[90%] text-[base] mt-4'>
-                    <button className='border-b  hover:border hover:ease-in hover:duration-100 w-[10rem] h-10 border-bordergray text-textgray rounded-sm ' onClick={() => window.open(slide.github, '_blank')}>Github</button>
-                    {slide.livelink ? (
-                      
-                      <button className='border-b hover:border hover:ease-in hover:duration-100 w-[10rem] h-10 border-bordergray text-textgray rounded-sm' onClick={() => window.open(slide.livelink, '_blank')}>link</button>) : ''}
-
-                  </div>
-                </div>
-              </div>
-              
-              <div className='lg:w-[65%] flex justify-center '>
-                <div
-                  ref={addToRef}
-                  className=' lg:h-[60vh] h-[40vh] w-[90vw] lg:w-[40vw] '
-                  // style={{
-                  //   backgroundImage: `url(${slide.image})`,
-                  //   backgroundPosition: "center",
-                  //   backgroundSize: "cover",
-                  // }}
-                >
-                  <img src={ slide.image} />
-                </div>
-                </div>
-
-            </div>
-
-          </section> 
-        )
-      })}
-      <div>
-        <section className=' text-textgray flex flex-col justify-center mb-40'>
-        {projects.map((slide, index) => {
-                
-          return (
-            <section className=' h-[60vh] text-textgray flex flex-row justify-center w-[100%] lg:w-[45%]' key={index}>
-                <div className='font_albertsans leading-7 flex flex-col justify-center  h-full px-5 lg:pl-10'>
-                  <h1 className='text-3xl mb-4'>{slide.name}</h1>
-                  <p className='text-sm smsm:text-[base] text-textgray md:text-[16px]'>{slide.description}</p>
-                  <div className='flex gap-10 max-w-[90%] text-sm mt-4 mb-5 '>
-                    <button className='border-b  hover:border hover:ease-in hover:duration-100 w-[10rem]  hover:duration-100-black text-textgray rounded-sm border-bordergray ' onClick={() => window.open(slide.github, '_blank')}>Github</button>
-                    {slide.livelink ? (
-                      <button className='border-b  hover:border hover:ease-in hover:duration-100 w-[10rem] h-10 border-bordergray text-textgray rounded-sm' onClick={() => window.open(slide.livelink, '_blank')}>link</button>) : ''}
-                  </div>
-                </div>
-            </section>
-          )
-        })}
-        </section>
+<section className="py-20 px-6 bg-white text-black" id="projects">
+  <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+    {projectsList.map((project, index) => (
+      <div key={index} className="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+        <img src={project.image} alt={project.name} className="w-full h-48 object-cover" />
+        <div className="p-4">
+          <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
+          <p className="text-sm text-gray-700 mb-4">{truncateText(project.description, 100)}</p>
+          <div className="flex gap-4">
+            <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-sm underline">GitHub</a>
+            {project.livelink && (
+              <a href={project.livelink} target="_blank" rel="noopener noreferrer" className="text-sm underline">Live</a>
+            )}
+          </div>
+        </div>
       </div>
-    </section>
+    ))}
+  </div>
+</section>
+
   )
 }
 

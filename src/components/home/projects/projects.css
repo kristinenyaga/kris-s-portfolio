@@ -159,18 +159,54 @@
 
 .overlay {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.5s;
-  padding: 10px;
+  transition: opacity 0.4s ease;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
 }
 
 .image-container:hover .overlay {
   visibility: visible;
   opacity: 1;
+}
+
+.overlay h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.overlay p {
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tech-tag {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
