@@ -72,7 +72,7 @@ const Navbar = () => {
     }
   }
   return (
-    <div className='max-w-full font_albertsans'>
+    <div className=' max-w-[1400px] m-auto font_albertsans'>
         <motion.div
           variants={navbarVars}
           initial="initial"
@@ -81,11 +81,11 @@ const Navbar = () => {
         <NavLink
           className='navitem'
             to="/">
-          <img src={ krislogo} className='pt-5 w-20 pl-4' alt="kris's logo" />
+          <img src={ krislogo} className='pt-5 w-24 pl-4' alt="kris's logo" />
         </NavLink>
-        <ul className='lg:flex  hidden justify-center gap-6 items-center'>
+        <ul className='lg:flex hidden justify-center gap-6 items-center'>
           <li>
-            <NavLink className='navitem' exact to="/"
+            <NavLink className='navitem text-[16px]' exact to="/"
                 style={({ isActive, isPending }) => {
                   return {
                     fontWeight: isActive ? "" : "",
@@ -96,13 +96,13 @@ const Navbar = () => {
               home</NavLink>
           </li>
           <li>
-            <NavLink className='navitem' to="/about">about</NavLink>
+            <NavLink className='navitem text-[16px]' to="/about">about</NavLink>
           </li>
           <li>
-            <NavLink className='navitem' to="/work">work</NavLink>
+            <NavLink className='navitem text-[16px]' to="/work">work</NavLink>
           </li>
           <li>
-            <NavLink className='navitem' to="/contact">contact</NavLink>
+            <NavLink className='navitem text-[16px]' to="/contact">contact</NavLink>
           </li>
         </ul>
 
