@@ -1,10 +1,15 @@
-
+import colors from "tailwindcss/colors";
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        "bounce-slow": "bounce 3s infinite",
+      },
+    },
     colors: {
+      ...colors,
       lightblue: "#84A4FC",
       darkblue: "#0046B3",
       black: "#141414",
@@ -14,7 +19,7 @@ export default {
       gray: "#F5F5F5",
       textgray: "#333333",
       bordergray: "#acacac",
-      graay:"#808080"
+      graay: "#808080",
     },
     fontFamily: {
       sans: ["Graphik", "sans-serif"],
@@ -35,7 +40,7 @@ export default {
     },
     screens: {
       sm: "350px",
-      smsm:"400px",// Small devices (e.g., smartphones)
+      smsm: "400px", // Small devices (e.g., smartphones)
       smmd: "500px",
       md: "728px", // Medium devices (e.g., tablets)
       lg: "1024px", // Large devices (e.g., laptops)

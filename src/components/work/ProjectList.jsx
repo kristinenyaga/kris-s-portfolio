@@ -46,14 +46,14 @@ const truncateText = (text, maxLength) =>
 
   return (
 <section className="py-20 px-6 bg-white text-black" id="projects">
-  <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
+  {/* <h2 className="text-4xl font-bold font-sans text-center mb-12">Projects</h2> */}
   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
     {projectsList.map((project, index) => (
-      <div key={index} className="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+      <div key={index} className="bg-gray-100 rounded-lg overflow-hidden transition">
         <img src={project.image} alt={project.name} className="w-full h-48 object-cover" />
         <div className="p-4">
-          <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
-          <p className="text-sm text-gray-700 mb-4">{truncateText(project.description, 100)}</p>
+          <h3 className="text-xl font-semibold font-serif mb-2">{project.name}</h3>
+          <p className="text-base text-gray-700 mb-4 font-serif">{truncateText(project.description, 200)}</p>
           <div className="flex gap-4">
             <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-sm underline">GitHub</a>
             {project.livelink && (

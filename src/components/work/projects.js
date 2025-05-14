@@ -3,7 +3,15 @@ import gympro from '../../assets/gympro.svg'
 import sumtext from '../../assets/sumtext.svg'
 import mern from '../../assets/mern.svg'
 import portfolio from '../../assets/portfolio.svg'
+import medicare from '../../assets/medicare.png'
 export const projectsList = [
+  {
+    image: medicare,
+    name: "Medicare",
+    description:
+      "Developed a diagnostic system to enhance medical accuracy and streamline patient-doctor workflows. Built admin, doctor, and patient dashboards using Next.js. Patients submit symptoms, receive AI-predicted diagnoses, and give feedback. Doctors manage appointments, review predictions, and generate PDF reports. Integrated a Flask ML model via a custom Node.js backend, handling APIs, auth, and business logic.",
+    github: "https://github.com/kristinenyaga/mediapp_frontend",
+  },
   {
     image: gympro,
     name: "GymPro",
@@ -11,7 +19,6 @@ export const projectsList = [
       "Created a fitness website using React that offers users an effortless resource for various exercises for at-home or gym workouts.The website has an intuitive user interface with a robust search feature based on different target body parts. I integrated YouTube links to provide supplementary exercise videos and demonstrations to enhance the variety of the platform. The website aims to empower users to find exercises that align with their fitness goals and incorporate exercise into their daily routines.",
     color: "black",
     github: "https://github.com/kristinenyaga/gym_exercises",
-    livelink: "https://gym-pro.vercel.app",
   },
   {
     image: mern,
