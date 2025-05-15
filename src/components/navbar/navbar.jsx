@@ -101,9 +101,9 @@ const Navbar = () => {
           <li>
             <NavLink className='navitem text-[16px]' to="/work">work</NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink className='navitem text-[16px]' to="/contact">contact</NavLink>
-          </li>
+          </li> */}
         </ul>
 
         <div

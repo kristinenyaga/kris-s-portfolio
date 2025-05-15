@@ -33,7 +33,7 @@ const Hero = () => {
                 <span className="text-darkblue">full-stack developer</span>
           </p>
           </div>
-          <div className='flex justify-between max-w-sm mt-5 items-center cursor-pointer'>
+          {/* <div className='flex justify-between max-w-sm mt-5 items-center cursor-pointer'>
             <div className='flex justify-center items-center gap-2  text-xl'>
              reach out on <div className='w-14 h-0.5 mt-1 bg-darkblue hidden sm:block'/>
             </div>
@@ -46,7 +46,7 @@ const Hero = () => {
             <div className='border border-textgray  p-2 rounded-full'>
               <BiLogoGmail className="text-black" onClick={()=>window.open('mailto:kristinenyaga@gmail.com')}/>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className=" relative flex items-center justify-center">    
           <img src={minime} className='z-40 circle_container_image ' alt="Mini Me" />

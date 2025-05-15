@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
         <div className='text-center flex'>
 
-          <div className='flex justify-between items-center gap-3 pt-10 md:pt-0'>
+          {/* <div className='flex justify-between items-center gap-3 pt-10 md:pt-0'>
             <div className='border border-textgray p-2 md:pp-2.5 rounded-full cursor-pointer  '>
               <FaLinkedinIn  className='text-white' onClick={()=>window.open('https://www.linkedin.com/in/christine-nyaga-89a691248','_blank')}   />
             </div>
@@ -25,7 +25,7 @@ const Footer = () => {
             <div className='border border-textgray  p-2 rounded-full'>
               <BiLogoGmail className="text-white" onClick={()=>window.open('mailto:kristinenyaga@gmail.com')}/>
             </div>
-          </div>
+          </div> */}
         </div>
         
         <div className='flex justify-around text-white absolute bottom-10 w-full mb-5 '>
@@ -43,9 +43,9 @@ const Footer = () => {
               <p>
                 <NavLink className='navitem' to="/work">work</NavLink>
               </p>
-              <p>
+              {/* <p>
                 <NavLink className='navitem' to="/contact">contact</NavLink>
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
