@@ -7,7 +7,7 @@ import { IoMdCloseCircle } from "react-icons/io";
 const Navbar = () => {
   const [open, setOpen] = useState(false)
   const navLinks = [
-    { title: "Home", href: "/" },
+    // { title: "Home", href: "/" },
     { title: "About Me", href: "/about" },
     { title: "My Work", href: "/work" },
     { title: "Contact", href: "/contact" },
@@ -101,9 +101,9 @@ const Navbar = () => {
           <li>
             <NavLink className='navitem text-[16px]' to="/work">work</NavLink>
           </li>
-          {/* <li>
+          <li>
             <NavLink className='navitem text-[16px]' to="/contact">contact</NavLink>
-          </li> */}
+          </li>
         </ul>
 
         <div
