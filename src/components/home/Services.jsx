@@ -1,5 +1,5 @@
 import { BsArrowUpRight } from 'react-icons/bs' 
-import cornerstonepatternsright from '../../assets/cornerstone-patterns-right.svg'
+import cornerstonepatternsright from '/assets/cornerstone-patterns-right.svg'
 import {useNavigate} from 'react-router-dom'
 const Services = () => {
   const nav = useNavigate()

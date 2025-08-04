@@ -1,4 +1,4 @@
-import minime from '../../assets/mini_me.svg';
+import minime from '/assets/mini_me.svg';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { BiLogoGmail } from 'react-icons/bi';
 import { BsArrowDown } from 'react-icons/bs'
