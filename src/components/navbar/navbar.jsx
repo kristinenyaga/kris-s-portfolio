@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import krislogo from "../../assets/krisslogo.svg"
+import krislogo from "/assets/krisslogo.svg"
 import { CgMenuCake } from "react-icons/cg";
 import { IoMdCloseCircle } from "react-icons/io";
 const Navbar = () => {
