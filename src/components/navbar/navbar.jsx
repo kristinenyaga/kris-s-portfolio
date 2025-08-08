@@ -123,7 +123,12 @@ const Navbar = () => {
           className='fixed z-50  h-[100vh] w-screen top-0 mt-0 left-0 bg-black text-lightgray p-2 origin-top px-5 font_albertsans'>
           <div className='flex h-full flex-col'>
             <div className='flex justify-between'>
+              <NavLink
+                className='navitem'
+                to="/">
               <p className='mt-5 text-base max-w-[20px]'>Kristine Nyaga</p>
+          
+              </NavLink>              
               <IoMdCloseCircle onClick={toggleMenu} className='text-[35px] mt-4'/>
             </div>
             <div className='h-full flex justify-center flex-col'>
