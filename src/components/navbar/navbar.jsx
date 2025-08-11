@@ -8,8 +8,8 @@ const Navbar = () => {
   const [open, setOpen] = useState(false)
   const navLinks = [
     // { title: "Home", href: "/" },
-    { title: "About Me", href: "/about" },
-    { title: "My Work", href: "/work" },
+    // { title: "About Me", href: "/about" },
+    { title: "My Projects", href: "/work" },
     { title: "Contact", href: "/contact" },
     { title: "kristinenyaga@gmail.com", href: "/" },
   
@@ -96,10 +96,10 @@ const Navbar = () => {
               home</NavLink>
           </li>
           <li>
-            <NavLink className='navitem text-[16px]' to="/about">about</NavLink>
+            {/* <NavLink className='navitem text-[16px]' to="/about">about</NavLink> */}
           </li>
           <li>
-            <NavLink className='navitem text-[16px]' to="/work">work</NavLink>
+            <NavLink className='navitem text-[16px]' to="/work">My Projects</NavLink>
           </li>
           <li>
             <NavLink className='navitem text-[16px]' to="/contact">contact</NavLink>

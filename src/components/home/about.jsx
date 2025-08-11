@@ -34,17 +34,6 @@ const About = () => {
             <p className="">
               I care about simplicity, accessibility, and building things that make sense—for users, teams, and businesses.
             </p>
-
-
-            <button 
-              className="text-white group self-start cursor-pointer mt-6"
-              onClick={navigate}
-            >
-              <span className="p-2 text-base md:p-3 rounded-full border border-white text-white group-hover:bg-white group-hover:text-black transition-all duration-300 ease-in-out group-hover:px-8 mr-2">
-                more about me
-              </span>
-              <BsArrowRight className=" inline group-hover:ml-3 group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
           </div>
 
         </div>

@@ -45,6 +45,9 @@ line-height: normal;
 .font_ibmplex{
   font-family: 'IBM Plex Serif', serif;
 }
+.font_syne{
+  font-family: "Syne", sans-serif;
+}
 .gradient-text {
   background: linear-gradient(to right, #FF5733, #0046B3);
   -webkit-background-clip: text;

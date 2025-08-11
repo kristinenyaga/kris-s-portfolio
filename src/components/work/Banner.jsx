@@ -33,10 +33,9 @@ const sideVariants = {
   }
 };
   const scrollToPosition = () => {
-    const nextSection = document.getElementById('projects'); // You can adjust the selector as per your HTML structure
-    
+    const nextSection = document.getElementById('projects');
     if (nextSection) {
-      // Scroll to the top position of the next section
+
       window.scrollTo({
         top: nextSection.offsetTop,
         behavior: 'smooth'
@@ -46,7 +45,7 @@ const sideVariants = {
 const Banner = () => {
 
   return (
-    <motion.div className="banner z-40 mt-0 text-textgray font_opensans h-[100vh]" variants={banner}>
+    <motion.div className="banner z-40 mt-0 bg-black text-white font_opensans h-[100vh]" variants={banner}>
       <div className="border-b border-gray ">
         <BannerRowTop title={"my"} />
       </div>
@@ -76,7 +75,7 @@ const BannerRowTop = ({ title }) => {
         <AnimatedLetters title={title} />
       </div>
     <motion.div className="text-base md:mt-16 left-0 max-w-sm pr-10" initial="initial" animate="animate" variants={sideVariants}>
-      <motion.span className=" font_opensans hidden md:block " variants={sideVariants}>
+      <motion.span className=" font_opensans text-white hidden md:block " variants={sideVariants}>
         Explore are some of the websites and databases i have developed.
       </motion.span>
     </motion.div>
@@ -90,7 +89,7 @@ const BannerRowBottom = ({ title }) => {
         <AnimatedLetters title={title} />
 
       <div className="flex justify-center items-center scroll" onClick={scrollToPosition}>
-        <p className="text-center flex justify-center items-center bg-black text-lightgray  rounded-full h-24 w-24 scroll-down bottom-20 cursor-pointer" >Scroll down</p>
+        <p className="text-center flex justify-center items-center bg-white text-black  rounded-full h-24 w-24 scroll-down bottom-20 cursor-pointer" >Scroll down</p>
       </div>
     </div>
   );

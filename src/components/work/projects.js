@@ -1,9 +1,9 @@
-import geritch from '../../assets/geritch.svg'
-import gympro from '../../assets/gympro.svg'
-import sumtext from '../../assets/sumtext.svg'
-import mern from '../../assets/mern.svg'
-import portfolio from '../../assets/portfolio.svg'
-import medicare from '../../assets/medicare.png'
+import geritch from '/assets/geritch.png'
+import gympro from '/assets/gympro.png'
+import sumtext from '/assets/sumtext.png'
+import mern from '/assets/mern.svg'
+import portfolio from '/assets/portfolio.svg'
+import medicare from '/assets/medicare.png'
 export const projectsList = [
   {
     image: medicare,
